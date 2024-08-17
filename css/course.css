@@ -235,6 +235,14 @@ label.box {
     border: 6px solid #ff6161 !important;
 }
 
+#quizhint.correct {
+    color: #77d7aa !important;
+}
+
+#quizhint.incorrect{
+    color: #ff6161 !important;
+}
+
 label.box:hover {
     background: #dabbfa;
 }

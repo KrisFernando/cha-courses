@@ -380,11 +380,15 @@ document.querySelectorAll(".quizbutton").forEach(quizbutton => {
             //if (debug) console.log("correct answer: " + answer.classList.contains("correct"));
             if ((answer.checked == true) && (answer.classList.contains("correct"))) {
                 document.querySelector("#quizhint").innerHTML = "<h4>Result:</h><br/><br/><p>That is the correct answer.</p><p>Please click on the next button in the navigation controls at the bottom left of your screen, to proceed.</p>";
+                document.querySelector("#quizhint").classList.add("correct");
+                document.querySelector("#quizhint").classList.remove("incorrect");
                 document.querySelector("label." + id + "-" + i).classList.add("right");
                 document.querySelector("#" + id).classList.add("right");
             }
             if ((answer.checked == true) && (answer.classList.contains("incorrect"))) {
                 document.querySelector("#quizhint").innerHTML = "<h4>Result:</h><br/><br/><p>Unfortunately, that is not the correct answer.</p><p>Please click on the Learning Material tab on the top right of your screen, to review the material for better insights.</p>";
+                document.querySelector("#quizhint").classList.remove("correct");
+                document.querySelector("#quizhint").classList.add("incorrect");
                 document.querySelector("label." + id + "-" + i).classList.add("wrong");
                 document.querySelector("#" + id).classList.remove("right");
             }

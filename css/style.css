@@ -1,5 +1,5 @@
 .dashboard {
-    max-width: 95% !important;
+    max-width: 98% !important;
 }
 
 .card-text {
@@ -12,5 +12,12 @@ h5 {
 }
 
 .row {
-    --bs-gutter-y: 1.5rem !important;
+    --bs-gutter-y: 1rem !important;
+}
+
+.program-block {
+    border: 1px #d5d4d4 solid !important;
+    border-radius: 20px;
+    height: 100%;
+    padding: 25px 10px;
 }

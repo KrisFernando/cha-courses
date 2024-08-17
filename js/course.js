@@ -210,6 +210,7 @@ function showContent(index) {
         document.querySelector("#slide" + parseInt(index)).classList.add("active");
         document.querySelector(".learnsection.active").classList.remove("active");
         document.querySelector("#section" + parseInt(index)).classList.add("active");
+        document.querySelector("#content").scrollTop = 0;
         currentSection = parseInt(index);
         setCookie("L", index, add+"courses/"+courseCode);
         if (debug) console.log("setcookie/ current: section" + index + " " + courseCode + " " + (currentSection));

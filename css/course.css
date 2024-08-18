@@ -289,7 +289,7 @@ canvas#confetti {
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (max-width: 1363px) {
+@media (max-width: 1400px) {
     .full-screen {
         margin-top: 10px;
         position: relative;
@@ -323,7 +323,7 @@ canvas#confetti {
         height: 75dvh;
     }    
     .btn {
-        padding: 0.5rem 0.6rem;
+        padding: 0.25rem 0.6rem;
         font-size: 1.2vw;
         height: 35px;
         min-width: 35px;

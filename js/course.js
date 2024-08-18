@@ -104,9 +104,6 @@ document.querySelector("#prev").addEventListener("click", () => {
     updateProcessBar(index);
     if (debug) console.log('#section' + parseInt(index + 1));
     scrollSmoothTo('section' + parseInt(index + 1));
-    if (autoplay) {
-        playSection(-1);
-    }
     checkNav(index);
     showContent(index);
 })
@@ -123,9 +120,6 @@ document.querySelector("#next").addEventListener("click", () => {
     updateProcessBar(index);
     if (debug) console.log('#section' + parseInt(index));
     //scrollSmoothTo('section' + parseInt(index + 1));
-    if (autoplay) {
-        playSection(1);
-    }
     checkNav(index);
     showContent(index);
 })
@@ -224,6 +218,9 @@ function showContent(index) {
             setCookie(courseCode, "completed", "");
         }
     }
+    if (autoplay) {
+        playSection(index);
+    }    
 }
 
 function getCookieVal(input, def, type = "s"){

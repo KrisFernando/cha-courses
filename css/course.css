@@ -18,7 +18,7 @@ h2 {
 }
 
 h3 {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 20px;
     margin-bottom: 15px;
 }
@@ -236,11 +236,11 @@ label.box {
 }
 
 #quizhint.correct {
-    color: #77d7aa !important;
+    color: #128a52 !important;
 }
 
 #quizhint.incorrect{
-    color: #ff6161 !important;
+    color: #a92121 !important;
 }
 
 label.box:hover {
@@ -298,23 +298,24 @@ canvas#confetti {
         margin: 0;
     }
     h1 {
-        font-size:2.5vw;
+        font-size:1.30rem;
     }
     h2 {
-        font-size:2vw;
+        font-size:1.20rem;
     }
     h3 {
         margin-top: 10px;
-        font-size:1.8vw;
+        font-size:1.10rem;
     }   
     body {
-        font-size:1.1vw;
+        font-size:0.9rem;
     }
     p {
-        font-size:1.25vw;
+        font-size:0.9rem;
     }       
     .nav-link {
-        padding: 0.25rem;
+        padding: 0.4rem !important;
+        font-size: 0.8rem !important;
     }
     .carousel-item img {
         height: 75dvh;
@@ -348,8 +349,75 @@ canvas#confetti {
     }    
 }
 
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {}
+@media (max-width: 1030px) {
+    .full-screen {
+        margin-top: 5px;
+        position: relative;
+    }    
+    section {
+        margin: 0;
+    }
+    h1 {
+        font-size:1.2rem;
+    }
+    h2 {
+        font-size:1.1rem;
+    }
+    h3 {
+        margin-top: 5px;
+        font-size:1.1rem;
+    }   
+    body {
+        font-size:0.8rem;
+    }
+    p {
+        font-size:0.8rem;
+    }       
+    .nav-link {
+        padding: 0.3rem !important;
+        font-size: 0.65rem !important;
+    }
+    .carousel-item img {
+        height: 70dvh;
+    }    
+}
 
-/* X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) {}
+@media (max-width: 854px) {
+    .full-screen {
+        margin-top: 5px;
+        position: relative;
+    }    
+    section {
+        margin: 0;
+    }
+    h1 {
+        font-size:1rem;
+    }
+    h2 {
+        font-size:0.9rem;
+    }
+    h3 {
+        margin-top: 2px;
+        font-size:0.9rem;
+    }   
+    body {
+        font-size:0.6rem;
+    }
+    p {
+        font-size:0.6rem;
+    }     
+    .nav-link {
+        padding: 0.15rem !important;
+        font-size: 0.5rem !important;
+    }
+    .carousel-item img {
+        height: 65dvh;
+    }           
+}
+
+@media (max-width: 669px) {
+    .nav-link {
+        padding: 0.1rem !important;
+        font-size: 0.4rem !important;
+    }    
+}

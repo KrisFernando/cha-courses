@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is the Cloud?</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/course.css">
+</head>
+
+<body class="full-screen">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-9">
+        <div class="d-flex">
+          <button id="home" type="button" class="btn btn-primary btn-md">
+            <i class="fa fa-home"></i>
+          </button>
+          <h1 id="title" style="margin-left: 15px;">What is the Cloud?</h1>
+        </div>
+      </div>
+      <div class="col-3">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a id="learn" class="nav-link active">Learning Material</a>
+          </li>
+          <li class="nav-item">
+            <a id="quiz" class="nav-link disabled">Knowledge Check</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row h-90 learn">
+      <div class="col-9">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-interval="false"
+          data-bs-ride="false" data-bs-touch="false">
+          <div class="carousel-inner">
+            <div id="slide1" class="carousel-item active" data-index="1">
+              <img src="../../img/course/tutorials/Learning.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide2" class="carousel-item" data-index="2">
+              <img src="img/2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide3" class="carousel-item" data-index="3">
+              <img src="img/3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide4" class="carousel-item" data-index="4">
+              <img src="img/4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide5" class="carousel-item" data-index="5">
+              <img src="img/5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide6" class="carousel-item" data-index="6">
+              <img src="img/6.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide7" class="carousel-item" data-index="7">
+              <img src="img/7.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide8" class="carousel-item" data-index="8">
+              <img src="img/8.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide9" class="carousel-item" data-index="9">
+              <img src="img/9.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide10" class="carousel-item" data-index="10">
+              <img src="img/10.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide11" class="carousel-item" data-index="11">
+              <img src="img/11.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide12" class="carousel-item" data-index="12">
+              <img src="img/12.jpg" class="d-block w-100" alt="...">
+            </div>
+            <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+            <div id="slide13" class="carousel-item" data-index="13">
+              <img src="../../img/course/tutorials/Knowledge.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div id="content" class="overflow-auto" style="height: calc(100vh - 150px);">
+          <section id="section1" class="learnsection active">
+            <h2>Welcome!</h2>
+            <p>Here is a quick tutorial before you begin:</p>
+            <ul class="no-bullets">
+              <li>1. Press the Play button to listen to the content</li>
+              <li>2. Press the Stop button to stop the audio</li>
+              <li>3. Press the Backward arrow button to go to the previous slide</li>
+              <li>4. Press the Next arrow button to go to the next slide</li>
+            </ul>
+          </section>
+
+          <section id="section2" class="learnsection">
+            <h2>Introduction to the Cloud</h2>
+            <b>Objective:</b>
+            <p>To provide students with a comprehensive understanding of cloud computing, enabling them to differentiate
+              between traditional IT infrastructure and cloud-based solutions, recognize the core benefits and
+              challenges of cloud adoption, and identify potential use cases for cloud services within various
+              organizational contexts.</p>
+            <br />
+            <br />
+            <p>Author and Designer: Kris Fernando</p>
+          </section>
+
+          <section id="section3" class="learnsection">
+            <h2>Pre-requisites</h2>
+            <p>Before we talk about the Cloud, let's understand the components behind the scenes.</p>
+            <p>We need to talk about:</p>
+            <ul>
+              <li>Data Centers</li>
+              <li>Hardware Resources</li>
+              <li>Rack Servers</li>
+              <li>Hypervisors & Virtual Machines</li>
+              <li>Control Plane and it's Interfaces</li>
+            </ul>
+          </section>
+
+          <section id="section4" class="learnsection">
+            <h2>What is a Data Center?</h2>
+
+            <p>A data center is a physical facility that houses computer systems and associated components, such as
+              telecommunications and storage systems. It is essentially the backbone of the digital world, providing the
+              infrastructure for businesses and individuals to access and utilize data and applications.</p>
+
+            <p>Imagine a data center as a massive, high-tech warehouse. Instead of storing physical goods, it stores and
+              processes digital information. It's filled with servers, networking equipment, and storage devices that
+              work together to deliver services like email, online shopping, cloud computing, and much more.</p>
+            <p>Key Components of a Data Center:</p>
+            <ul>
+              <li>Warehouse: Designed to house and operate IT equipment.</li>
+              <li>Backup Generators: Data centers require constant and reliable power to operate incase of power loss.</li>
+              <li>Cooling Systems: Due to the heat generated by servers, efficient cooling is crucial.</li>
+              <li>Networking Equipment: This connects all the components within the data center and to the outside
+                world.</li>
+              <li>Security Systems: Protecting data is paramount, so data centers have robust security measures.</li>
+            </ul>
+          </section>
+
+          <section id="section5" class="learnsection">
+            <h2>Equipment Inside a Data Center</h2>
+            <p>A data center is a complex environment filled with specialized equipment designed to process, store, and
+              transmit data efficiently and reliably.</p>
+            <p>Here are a breakdown of the primary components:</p>
+            <ul>
+              <li>Routers: Devices that direct data packets across networks.</li>
+              <li>Switches: Connect devices within a network.</li>
+              <li>Firewalls: Security systems that monitor and control network traffic.</li>
+              <li>Networking cables: Used to connect devices within a network (Ethernet, fiber optic).</li>
+              <li>Power cables: Supply electricity to data center equipment.</li>
+              <li>Ventilation systems: Remove heat generated by equipment.</li>
+              <li>Server racks: Metal frames to house equipment.</li>
+              <li>Rack servers: Servers designed to fit into server racks.</li>
+            </ul>
+          </section>
+
+          <section id="section6" class="learnsection">
+            <h2>Rack Server</h2>
+            <p>A rack server is a type of computer server designed to be mounted in a standardized server rack. These
+              servers are optimized for space efficiency and are commonly used in data centers to maximize the
+              utilization of available space.</p>
+            <p>Here are some key features:</p>
+            <ul class="no-bullets">
+              <li>1. Low Profile for Stackability.</li>
+              <li>2. Multiple Storage Bays (HDD/ SSD) 160TB.</li>
+              <li>3. Powerful Cooling Fan System.</li>
+              <li>4. Multiple Memory Slots (RAM) 2TB.</li>
+              <li>5. Dual Central Processing Units (CPUs) 256 cores.</li>
+              <li>6. Dual Power Supply Units (PSUs).</li>
+              <li>7. Additional PCIe Slots (NICs/GPUs).</li>
+            </ul>
+          </section>
+
+          <section id="section7" class="learnsection">
+            <h2>Hypervisors and Virtual Machines</h2>
+
+            <b>Hypervisors</b>
+            <p>A hypervisor, also known as a virtual machine monitor (VMM), is software that creates and manages virtual
+              machines (VMs). It acts as a bridge between the physical hardware and the virtual environment.
+              Essentially, a hypervisor allows multiple operating systems to run concurrently on a single physical
+              machine.</p>
+
+            <p>Key functions of a hypervisor:</p>
+            <ul>
+              <li>Resource allocation: Distributes hardware resources (CPU, memory, storage, network) among virtual
+                machines.</li>
+              <li>Isolation: Creates isolated environments for each virtual machine, preventing interference between
+                them.</li>
+              <li>Virtualization: Emulates hardware components for each virtual machine.</li>
+            </ul>
+
+            <b>Virtual Machines</b>
+            <p>A virtual machine (VM) is a software-based emulation of a physical computer system. It operates as if it
+              were a standalone machine, with its own operating system, applications, and network configuration. VMs
+              rely on a hypervisor to function.</p>
+
+            <p>Key characteristics of a virtual machine:</p>
+            <ul>
+              <li>Isolation: Each VM operates independently, unaffected by other VMs on the same physical host.</li>
+              <li>Portability: VMs can be easily moved between different physical hosts.</li>
+              <li>Efficiency: Resource sharing among VMs can optimize hardware utilization.</li>
+            </ul>
+
+            <b>Relationship</b>
+            <p>Think of a hypervisor as the landlord of an apartment building and the virtual machines as the tenants.
+              The landlord (hypervisor) manages the building (physical hardware) and allocates resources to each tenant
+              (virtual machine). Each tenant has their own space and can operate independently, but they rely on the
+              landlord for essential services.</p>
+
+            <p>In summary, hypervisors are the foundation for creating and managing virtual machines. They enable the
+              efficient and flexible utilization of physical hardware resources by isolating multiple operating systems
+              and applications within a single physical machine.</p>
+
+          </section>
+
+          <section id="section8" class="learnsection">
+            <h2></h2>
+          </section>
+
+          <section id="section9" class="learnsection">
+            <h2></h2>
+          </section>
+
+          <section id="section10" class="learnsection">
+            <h2></h2>
+          </section>
+
+          <section id="section11" class="learnsection">
+            <h2></h2>
+          </section>
+
+          <section id="section12" class="learnsection">
+            <h2></h2>
+          </section>
+
+          <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+          <section id="section13" class="learnsection">
+            <h2>Congratulations!</h2>
+            <p>What is next for you? Let's do a knowledge check to see if you completely grasped the concepts you
+              just learned.</p>
+            <ul class="no-bullets">
+              <li>1. Click on the Knowledge Check tab on the top right of your screen and take the quiz.</li>
+              <li>2. Click on the Learning Material to return for any help.</li>
+            </ul>
+            <p>If you require additional help please reach out in any of the Chat Groups.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="row h-90 quiz hide">
+      <div class="col-9">
+        <div id="quizcontent" class="overflow-auto">
+          <section id="q1" class="questions active" data-index="1">
+            <h3>1) What is the primary purpose of encryption in cyber security?</h3>
+
+            <input type="radio" name="q1a" class="answer q1 incorrect" id="q1-1">
+            <input type="radio" name="q1a" class="answer q1 correct" id="q1-2">
+            <input type="radio" name="q1a" class="answer q1 incorrect" id="q1-3">
+            <input type="radio" name="q1a" class="answer q1 incorrect" id="q1-4">
+
+            <label for="q1-1" class="box q1-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) To compress data for faster
+                  transmission. </span> </div>
+            </label>
+            <label for="q1-2" class="box q1-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) To protect data by converting
+                  it into a code. </span> </div>
+            </label>
+            <label for="q1-3" class="box q1-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) To delete unnecessary files
+                  from a system. </span> </div>
+            </label>
+            <label for="q1-4" class="box q1-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) To speed up network traffic.
+                </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q1b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q2" class="questions" data-index="2">
+            <h3>2) Which of the following is an example of a strong password?</h3>
+
+            <input type="radio" name="q2a" class="answer q2 incorrect" id="q2-1">
+            <input type="radio" name="q2a" class="answer q2 incorrect" id="q2-2">
+            <input type="radio" name="q2a" class="answer q2 incorrect" id="q2-3">
+            <input type="radio" name="q2a" class="answer q2 correct" id="q2-4">
+
+            <label for="q2-1" class="box q2-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) 12345678. </span> </div>
+            </label>
+            <label for="q2-2" class="box q2-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) password123. </span> </div>
+            </label>
+            <label for="q2-3" class="box q2-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) qwerty. </span> </div>
+            </label>
+            <label for="q2-4" class="box q2-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) gl.4'e5Me4Y8d*8Bd]Wn. </span>
+              </div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q2b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q3" class="questions" data-index="3">
+            <h3>3) Which type of cyber attack involves overwhelming a network or website to disrupt service?</h3>
+
+            <input type="radio" name="q3a" class="answer q3 incorrect" id="q3-1">
+            <input type="radio" name="q3a" class="answer q3 incorrect" id="q3-2">
+            <input type="radio" name="q3a" class="answer q3 correct" id="q3-3">
+            <input type="radio" name="q3a" class="answer q3 incorrect" id="q3-4">
+
+            <label for="q3-1" class="box q3-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) Phishing. </span> </div>
+            </label>
+            <label for="q3-2" class="box q3-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) Ransomware. </span> </div>
+            </label>
+            <label for="q3-3" class="box q3-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) Denial of Service (DoS).
+                </span> </div>
+            </label>
+            <label for="q3-4" class="box q3-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Man-in-the-Middle. </span>
+              </div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q3b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q4" class="questions" data-index="4">
+            <h3>4) What does the term "vulnerability" refer to in cyber security?</h3>
+
+            <input type="radio" name="q4a" class="answer q4 correct" id="q4-1">
+            <input type="radio" name="q4a" class="answer q4 incorrect" id="q4-2">
+            <input type="radio" name="q4a" class="answer q4 incorrect" id="q4-3">
+            <input type="radio" name="q4a" class="answer q4 incorrect" id="q4-4">
+
+            <label for="q4-1" class="box q4-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) A weakness that can be
+                  exploited by a threat. </span> </div>
+            </label>
+            <label for="q4-2" class="box q4-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) A type of malicious software.
+                </span> </div>
+            </label>
+            <label for="q4-3" class="box q4-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) A successful attempt to breach
+                  a system. </span> </div>
+            </label>
+            <label for="q4-4" class="box q4-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) A security measure to protect
+                  data. </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q4b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q5" class="questions" data-index="5">
+            <h3>5) Which of the following best describes "social engineering"?</h3>
+
+            <input type="radio" name="q5a" class="answer q5 incorrect" id="q5-1">
+            <input type="radio" name="q5a" class="answer q5 incorrect" id="q5-2">
+            <input type="radio" name="q5a" class="answer q5 incorrect" id="q5-3">
+            <input type="radio" name="q5a" class="answer q5 correct" id="q5-4">
+
+            <label for="q5-1" class="box q5-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) Using software to find and
+                  exploit vulnerabilities. </span> </div>
+            </label>
+            <label for="q5-2" class="box q5-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) Protecting systems from
+                  unauthorized access. </span> </div>
+            </label>
+            <label for="q5-3" class="box q5-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) Encrypting data to prevent
+                  unauthorized access. </span> </div>
+            </label>
+            <label for="q5-4" class="box q5-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Manipulating individuals into
+                  revealing confidential information. </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q5b" onclick="">Submit</button>
+            </div>
+          </section>
+
+
+          <section id="q6" class="questions" data-index="6">
+            <canvas id="confetti"></canvas>
+            <h3>Congratulations! Your Knowledge is 100%</h3>
+            <p>You can now proceed to the next course on your learning path. If one is not availble please inquire with
+              the community. We are releasing new courses periodicly, so keep a lookout for them.</p>
+            <p>Click on the Home Icon at the top left of your screen. <i class="fa fa-home"></i> </p>
+            <p>Good luck! Keep learning and growing!</p>
+          </section>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="overflow-auto" style="height: calc(100vh - 140px);">
+          <section id="quizhint"></section>
+        </div>
+      </div>
+    </div>
+    <div class="row controls">
+      <div class="col-7">
+        <button id="play" type="button" class="btn btn-danger btn-md">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="stop" type="button" class="btn btn-dark btn-md">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+        <button id="prev" type="button" class="btn btn-primary btn-md disabled"
+          data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button id="next" type="button" class="btn btn-primary btn-md" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <select id="voices" class="form-select-lg select"></select>
+        <button id="fullscreen" type="button" class="btn btn-primary btn-md">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+      </div>
+      <div class="col-2 controls align-right">
+        <input id="auto" class="check-input" type="checkbox" value="">
+        <label class="form-check-label" for="check-input" style="margin-right: 15px;">
+          Play On Next
+        </label>
+      </div>
+      <div class="col-3">
+        <div class="progress">
+          <div id="progress" class="progress-bar bg-success" role="progressbar">
+            0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script type="text/javascript" src="../../js/course.js"></script>
+</body>
+
+</html>

@@ -330,10 +330,10 @@ canvas#confetti {
         min-width: 35px;
     }
     .select {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
     }
     .progress {
-        font-size: 1.3vw;
+        font-size: 1.2vw;
         height: 30px;
     }
     label.box {

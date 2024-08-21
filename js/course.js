@@ -286,6 +286,10 @@ function removeTags(str) {
     else
         str = str.toString();
     str = str.replaceAll('</li>', '.');
+    str = str.replaceAll('</b>', '.');
+    str = str.replaceAll('</h2>', '.');
+    str = str.replaceAll('</h3>', '.');
+    str = str.replaceAll('</p>', '.');
     // Regular expression to identify HTML tags in
     // the input string. Replacing the identified
     // HTML tag with a null string.

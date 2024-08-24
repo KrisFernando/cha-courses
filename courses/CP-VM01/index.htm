@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Title</title>
+  <title>Compute in the Cloud</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"
@@ -20,7 +20,7 @@
           <button id="home" type="button" class="btn btn-primary btn-md">
             <i class="fa fa-home"></i>
           </button>
-          <h1 id="title" style="margin-left: 15px;">Course Title</h1>
+          <h1 id="title" style="margin-left: 15px;">Compute in the Cloud</h1>
         </div>
       </div>
       <div class="col-3">
@@ -99,63 +99,219 @@
           </section>
 
           <section id="section2" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Compute in the Cloud</h2>
+            <p>
+              <b>Course Objective</b>
+              This course aims to provide a comprehensive understanding of compute in the cloud, enabling students to
+              effectively utilize cloud-based computing resources for various applications. By the end of the course,
+              students will be able to:
             <ul>
-              <li></li>
-              <li></li>
+              <li>Explain the fundamental concepts of cloud computing and virtualization.</li>
+              <li>Identify the different types of cloud services and deployment models.</li>
+              <li>Create and manage virtual machines in the cloud.</li>
+              <li>Optimize cloud resource utilization and performance.</li>
+              <li>Leverage cloud-based tools and services for specific use cases.</li>
             </ul>
+            </p>
+
+            <b>What is Compute in the Cloud?</b>
+            <p>Compute in the cloud refers to the ability to access and utilize computing resources, such as processing
+              power, memory, and storage, over the internet. This model eliminates the need for on-premises hardware and
+              infrastructure, providing flexibility, scalability, and cost-effectiveness.</p>
+
           </section>
 
           <section id="section3" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
+            <h2>Virtual Machine Components</h2>
+
+            <p>Virtual machines are software-based emulations of physical computers. They are composed of several key
+              components:</p>
+
+            <b>CPU</b>
+            <p>The CPU, or central processing unit, is the brain of the virtual machine. It performs calculations and
+              executes instructions. The amount of CPU power allocated to a virtual machine can significantly impact its
+              performance.</p>
+
+            <b>Memory</b>
+            <p>Memory, or RAM, is used by the virtual machine to store data and instructions temporarily. The more
+              memory allocated to a virtual machine, the more applications it can run simultaneously and the faster it
+              can perform tasks.</p>
+
+            <b>Storage</b>
+            <p>Storage is used to store data and applications permanently. Virtual machines typically have virtual hard
+              disks, which can be connected to various storage types, such as SSDs or HDDs.</p>
+
+            <b>Network</b>
+            <p>The network interface allows the virtual machine to communicate with other devices on the network. This
+              includes connecting to other virtual machines, physical servers, and the internet.</p>
+
+            <b>GPU (Optional)</b>
+            <p>Some virtual machines may have access to a GPU, or graphics processing unit. GPUs are specialized
+              hardware that can accelerate certain tasks, such as rendering graphics or performing machine learning
+              calculations.</p>
+
+            <p>The specific configuration of these components will vary depending on the requirements of the virtual
+              machine and the resources available on the underlying physical server.</p>
+
           </section>
 
           <section id="section4" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Optimized Compute for Different Workloads</h2>
+
+            <p>Below are some examples of workloads you might run on virtual machines. The way we create VM for these
+              workloads will differ based on the end function.</p>
+
+            <b>Web Server</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>CPU: High for handling multiple concurrent connections.</li>
+              <li>Memory: Moderate for caching frequently accessed data.</li>
+              <li>Storage: High for fast read/write operations (SSD).</li>
+              <li>Network: High for handling web traffic.</li>
+              <li>GPU: Not required, unless serving graphics-intensive content.</li>
+            </ul>
+
+            <b>Application Server (API)</b>
+            <ul>
+              <li>CPU: High for handling multiple requests.</li>
+              <li>Memory: Moderate for application state and data.</li>
+              <li>Storage: High for fast access to data (SSD).</li>
+              <li>Network: High for communication with other services.</li>
+              <li>GPU: Not required, unless the application involves heavy graphics processing.</li>
+            </ul>
+
+            <b>Database Server</b>
+            <ul>
+              <li>CPU: High for handling database queries.</li>
+              <li>Memory: High for caching data and query results.</li>
+              <li>Storage: High for fast data access (SSD).</li>
+              <li>Network: Moderate for communication with applications.</li>
+              <li>GPU: Not required, unless the database involves complex calculations.</li>
+            </ul>
+
+            <b>Video Encoding Server</b>
+            <ul>
+              <li>CPU: High for encoding and transcoding video.</li>
+              <li>Memory: Moderate for video processing.</li>
+              <li>Storage: High for storing and processing video files (HDD).</li>
+              <li>Network: High for streaming video content.</li>
+              <li>GPU: High for accelerating video encoding and transcoding.</li>
+            </ul>
+
+            <b>Gaming Servers</b>
+            <ul>
+              <li>CPU: High for handling game logic and calculations.</li>
+              <li>Memory: Moderate for game data and player states.</li>
+              <li>Storage: High for fast access to game assets (SSD).</li>
+              <li>Network: High for real-time gameplay.</li>
+              <li>GPU: High for rendering graphics and animations.</li>
+            </ul>
+
+            <b>Batch Processing</b>
+            <ul>
+              <li>CPU: High for parallel processing of large datasets.</li>
+              <li>Memory: High for storing and processing data.</li>
+              <li>Storage: High for storing and processing data (HDD).</li>
+              <li>Network: Moderate for data transfer.</li>
+              <li>GPU: High for machine learning or deep learning.</li>
+            </ul>
+
+            <b>High-Performance Computing (HPC)</b>
+            <ul>
+              <li>CPU: High for parallel processing.</li>
+              <li>Memory: High for storing and processing data.</li>
+              <li>Storage: High for storing and accessing data.</li>
+              <li>Network: High for communication between nodes.</li>
+              <li>GPU: High for scientific simulations and machine learning.</li>
             </ul>
           </section>
 
           <section id="section5" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Virtual Machines Images</h2>
+
+            <p>VM images are pre-configured templates that contain the operating system, applications, and data for a virtual machine. They allow you to quickly create new virtual machines without having to manually install and configure everything from scratch.</p>
+            
+            <b>Types of VM Images</b>
             <ul>
-              <li></li>
-              <li></li>
+            <li>Operating System Images: These images only contain the operating system and basic drivers. You can customize them by installing additional applications and configuring settings.</li>
+            <li>Application Images: These images contain the operating system and pre-installed applications. They are often used for specific use cases, such as web servers or databases.</li>
+            <li>Golden Images: These images are highly customized templates that include the operating system, applications, and configuration settings. They are often used for production environments to ensure consistency and security.</li>
             </ul>
+            
+            <b>Choosing the Right VM Image</b>
+            <p>When selecting a VM image, consider the following factors:</p>
+            <ul>
+            <li>Operating system: Choose an operating system that is compatible with your applications and meets your performance requirements.</li>
+            <li>Applications: If you need specific applications pre-installed, look for an image that includes them.</li>
+            <li>Configuration: Consider the default configuration settings of the image and whether they meet your needs.</li>
+            <li>Security: Ensure that the image is up-to-date with security patches and vulnerabilities.</li>
+            </ul>
+            
+            <b>Using VM Images</b>
+            <p>To create a new virtual machine from an image, you typically select the image and specify the desired resources, such as CPU, memory, and storage. The cloud provider will then provision the virtual machine based on the image and the specified resources.</p>
+            
+            <p>Once the virtual machine is created, you can access it using a remote connection and customize it further as needed.</p>
           </section>
 
           <section id="section6" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Connecting to Virtual Machines</h2>
+
+            <p>Remote connections allows you to access and manage virtual machines from a remote location. This is essential for cloud computing, as virtual machines are often hosted in data centers that may be physically distant from your location.</p>
+            
+            <b>Common Remote Connection Protocols</b>
             <ul>
-              <li></li>
-              <li></li>
+            <li>Remote Desktop Protocol (RDP): Primarily used for Windows-based virtual machines. It provides a graphical user interface for accessing the VM's desktop.</li>
+            <li>Secure Shell (SSH): Used for connecting to Linux-based virtual machines. It provides a command-line interface for managing the VM.</li>
             </ul>
+            
+            <b>Configuring Remote Access</b>
+            <p>To enable remote access to a virtual machine, you typically need to configure the following settings:</p>
+            <ul>
+            <li>Network rules: Allow incoming traffic on the appropriate ports (e.g., port 3389 for RDP, port 22 for SSH).</li>
+            <li>Authentication: Set up user accounts and passwords for accessing the VM.</li>
+            <li>Security: Implement security measures such as firewalls and encryption to protect the VM from unauthorized access.</li>
+            </ul>
+            
+            <b>Using Remote Connection Tools</b>
+            <p>Once you have configured remote access, you can use a remote connection tool to connect to the VM. Popular tools include:</p>
+            <ul>
+            <li>Remote Desktop Connection (Windows): Built-in tool for connecting to Windows-based VMs.</li>
+            <li>PuTTY (Linux/Windows): SSH client for connecting to Linux-based VMs.</li>
+            </ul>
+            
+            <p>By using remote connections, you can manage your virtual machines from anywhere with an internet connection, making it convenient for tasks such as administration, troubleshooting, and application deployment.</p>
+            
           </section>
 
           <section id="section7" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Install Application on a Virtual Machine</h2>
+
+            <p>Once you have created a virtual machine, you can customize it by installing and configuring custom applications. This can be done manually, using scripts, or by deploying a pre-configured image.</p>
+            
+            <b>Manual Configuration</b>
+            <p>To manually configure a custom application, you typically follow these steps:</p>
             <ul>
-              <li></li>
-              <li></li>
+            <li>Download the application: Obtain the dependancies and installation files for the application.</li>
+            <li>Run the installer: Execute the installation program and follow the on-screen instructions.</li>
+            <li>Configure the application: Set up any necessary settings or parameters for the application.</li>
             </ul>
+            
+            <b>Using Scripts</b>
+            <p>Automation scripts can be used to automate the installation and configuration of applications on virtual machines. This can save time and reduce errors.</p>
+            <ul>
+            <li>Shell scripts: Use scripts written in Bash, PowerShell, or other shell languages.</li>
+            <li>Ansible: A popular configuration management tool that can be used to automate tasks on multiple VMs.</li>
+            <li>Chef and Puppet: Other configuration management tools that can be used for automating application deployment.</li>
+            </ul>
+            
+            <b>Using Golden Images</b>
+            <p>Golden images are pre-configured virtual machine images that include the operating system, applications, and configuration settings. They can be used to quickly deploy new virtual machines with the desired applications already installed.</p>
+            <ul>
+            <li>Create a golden image: Configure a virtual machine with the desired applications and settings, then create an image from it.</li>
+            <li>Deploy the image: Use the image to create new virtual machines with the same configuration.</li>
+            </ul>
+            
+            <p>By following these methods, you can effectively configure virtual machines with custom applications to meet your specific needs.</p>
+            
           </section>
 
           <section id="section8" class="learnsection">
@@ -365,6 +521,7 @@
             <h3>Congratulations! Your Knowledge is 100%</h3>
             <p>You can now proceed to the next course on your learning path. If one is not availble please inquire with
               the community. We are releasing new courses periodicly, so keep a lookout for them.</p>
+            <p>Click on the Home Icon at the top left of your screen. <i class="fa fa-home"></i> </p>
             <p>Good luck! Keep learning and growing!</p>
           </section>
         </div>

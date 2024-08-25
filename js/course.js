@@ -55,6 +55,7 @@ voiceSelect.addEventListener("change", () => {
 
 document.querySelector("#auto").addEventListener("change", () => {
     autoplay = document.querySelector("#auto").checked;
+    setCookie("autoplay", autoplay, "");
     if (debug) console.log("autoplay: " + autoplay);
 })
 
@@ -195,6 +196,7 @@ function showContent(index) {
         }
     }
     if (autoplay) {
+        document.querySelector("#auto").checked = autoplay;
         playSection(index);
     }    
 }
@@ -206,7 +208,10 @@ function getCookieVal(input, def, type = "s"){
     } else {
         if(type == "s") {
             return cookie;
-        } else {
+        } else if(type == "b") {
+            return (cookie === "true");
+        }
+         else {
             return parseInt(cookie);
         }
     }
@@ -217,6 +222,7 @@ function start() {
     window.speechSynthesis.cancel();
     defaultvoice = getCookieVal("voice",0,"i");
     view = getCookieVal("view","learn");
+    autoplay = getCookieVal("autoplay",false,"b");
     currentSection = getCookieVal("L",1,"i");
     currentQuestion = 1;
     if (view == "learn") {

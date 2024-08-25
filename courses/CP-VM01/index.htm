@@ -103,14 +103,21 @@
             <p>
               <b>Course Objective</b>
               This course aims to provide a comprehensive understanding of compute in the cloud, enabling students to
-              effectively utilize cloud-based computing resources for various applications. By the end of the course,
-              students will be able to:
-            <ul>
-              <li>Explain the fundamental concepts of cloud computing and virtualization.</li>
-              <li>Identify the different types of cloud services and deployment models.</li>
-              <li>Create and manage virtual machines in the cloud.</li>
-              <li>Optimize cloud resource utilization and performance.</li>
-              <li>Leverage cloud-based tools and services for specific use cases.</li>
+              effectively utilize cloud-based computing resources for various applications.
+              <p>Topics to cover:</p>
+              <ul>
+              <li>Virtual Machine Components</li>
+              <li>VM Optimization by Workload</li>
+              <li>Virtual Machine Deployment</li>              
+              <li>Connecting to Virtual Machines</li>
+              <li>Install Application on a Virtual Machine</li>
+              <li>Scalability</li>
+              <li>Distribute Traffic Over a Cluster</li>              
+              <li>Various Compute Options</li>
+              <li></li>
+              <li></li>
+              <li></li>              
+              <li></li>
             </ul>
             </p>
 
@@ -156,77 +163,38 @@
           </section>
 
           <section id="section4" class="learnsection">
-            <h2>Optimized Compute for Different Workloads</h2>
+            <h2>VM Optimization by Workload</h2>
 
-            <p>Below are some examples of workloads you might run on virtual machines. The way we create VM for these
+            <p>Below are some examples of workloads you might run on virtual machines. The way we provision VM for these
               workloads will differ based on the end function.</p>
-
-            <b>Web Server</b>
-            <ul>
-              <li>CPU: High for handling multiple concurrent connections.</li>
-              <li>Memory: Moderate for caching frequently accessed data.</li>
-              <li>Storage: High for fast read/write operations (SSD).</li>
-              <li>Network: High for handling web traffic.</li>
-              <li>GPU: Not required, unless serving graphics-intensive content.</li>
-            </ul>
-
-            <b>Application Server (API)</b>
-            <ul>
-              <li>CPU: High for handling multiple requests.</li>
-              <li>Memory: Moderate for application state and data.</li>
-              <li>Storage: High for fast access to data (SSD).</li>
-              <li>Network: High for communication with other services.</li>
-              <li>GPU: Not required, unless the application involves heavy graphics processing.</li>
-            </ul>
-
-            <b>Database Server</b>
-            <ul>
-              <li>CPU: High for handling database queries.</li>
-              <li>Memory: High for caching data and query results.</li>
-              <li>Storage: High for fast data access (SSD).</li>
-              <li>Network: Moderate for communication with applications.</li>
-              <li>GPU: Not required, unless the database involves complex calculations.</li>
-            </ul>
-
-            <b>Video Encoding Server</b>
-            <ul>
-              <li>CPU: High for encoding and transcoding video.</li>
-              <li>Memory: Moderate for video processing.</li>
-              <li>Storage: High for storing and processing video files (HDD).</li>
-              <li>Network: High for streaming video content.</li>
-              <li>GPU: High for accelerating video encoding and transcoding.</li>
-            </ul>
-
-            <b>Gaming Servers</b>
-            <ul>
-              <li>CPU: High for handling game logic and calculations.</li>
-              <li>Memory: Moderate for game data and player states.</li>
-              <li>Storage: High for fast access to game assets (SSD).</li>
-              <li>Network: High for real-time gameplay.</li>
-              <li>GPU: High for rendering graphics and animations.</li>
-            </ul>
-
-            <b>Batch Processing</b>
-            <ul>
-              <li>CPU: High for parallel processing of large datasets.</li>
-              <li>Memory: High for storing and processing data.</li>
-              <li>Storage: High for storing and processing data (HDD).</li>
-              <li>Network: Moderate for data transfer.</li>
-              <li>GPU: High for machine learning or deep learning.</li>
-            </ul>
-
-            <b>High-Performance Computing (HPC)</b>
-            <ul>
-              <li>CPU: High for parallel processing.</li>
-              <li>Memory: High for storing and processing data.</li>
-              <li>Storage: High for storing and accessing data.</li>
-              <li>Network: High for communication between nodes.</li>
-              <li>GPU: High for scientific simulations and machine learning.</li>
-            </ul>
+              <b>Compute Optimized</b>
+              <p>Designed for compute-intensive workloads that require high CPU performance.</p>
+              <p>Example applications: Web servers, application servers, batch processing, and scientific simulations.</p>
+              
+              <b>Memory Optimized</b>
+              <p>Optimized for memory-intensive workloads that require large amounts of RAM.</p>
+              <p>Example applications: In-memory databases, data warehousing, real-time analytics, and machine learning.</p>
+              
+              <b>Storage Optimized</b>
+              <p>Optimized for storage-intensive workloads that require high I/O performance.</p>
+              <p>Example applications: Databases, content delivery networks (CDNs), and big data analytics.</p>
+              
+              <b>Accelerated Computing</b>
+              <p>Equipped with specialized hardware, such as GPUs or TPUs, for accelerating compute-intensive tasks.</p>
+              <p>Example applications: Machine learning, deep learning, scientific simulations, and video processing.</p>
+              
+              <b>HPC Optimized</b>
+              <p>Designed for high-performance computing (HPC) workloads that require large-scale parallel processing.</p>
+              <p>Example applications: Scientific simulations, weather forecasting, financial modeling, and drug discovery.</p>
+              
+              <b>General Purpose</b>
+              <p>Balanced instances suitable for a variety of workloads.</p>
+              <p>Example applications: Web servers, application servers, development environments, and small-scale databases.</p>
+              
           </section>
 
           <section id="section5" class="learnsection">
-            <h2>Virtual Machines Images</h2>
+            <h2>Virtual Machine Deployment</h2>
 
             <p>VM images are pre-configured templates that contain the operating system, applications, and data for a virtual machine. They allow you to quickly create new virtual machines without having to manually install and configure everything from scratch.</p>
             
@@ -274,8 +242,8 @@
             <b>Using Remote Connection Tools</b>
             <p>Once you have configured remote access, you can use a remote connection tool to connect to the VM. Popular tools include:</p>
             <ul>
-            <li>Remote Desktop Connection (Windows): Built-in tool for connecting to Windows-based VMs.</li>
-            <li>PuTTY (Linux/Windows): SSH client for connecting to Linux-based VMs.</li>
+            <li>Remote Desktop Connection (Windows): Built-in tool for connecting to Windows-based VM.</li>
+            <li>PuTTY (Linux/Windows): SSH client for connecting to Linux-based VM.</li>
             </ul>
             
             <p>By using remote connections, you can manage your virtual machines from anywhere with an internet connection, making it convenient for tasks such as administration, troubleshooting, and application deployment.</p>
@@ -299,7 +267,7 @@
             <p>Automation scripts can be used to automate the installation and configuration of applications on virtual machines. This can save time and reduce errors.</p>
             <ul>
             <li>Shell scripts: Use scripts written in Bash, PowerShell, or other shell languages.</li>
-            <li>Ansible: A popular configuration management tool that can be used to automate tasks on multiple VMs.</li>
+            <li>Ansible: A popular configuration management tool that can be used to automate tasks on multiple VM.</li>
             <li>Chef and Puppet: Other configuration management tools that can be used for automating application deployment.</li>
             </ul>
             
@@ -315,7 +283,7 @@
           </section>
 
           <section id="section8" class="learnsection">
-            <h2>Vertical and Horizontal Scaling</h2>
+            <h2>Scalability</h2>
 
             <p>Scaling is the ability to adjust the resources allocated to meet changing demands. There are two main types of scaling: vertical and horizontal.</p>
             
@@ -342,6 +310,7 @@
             <li>Scalability: Can handle much larger workloads than vertical scaling.</li>
             <li>Fault tolerance: Multiple virtual machines can provide redundancy and improve availability.</li>
             <li>Cost-effectiveness: Can be more cost-effective for large-scale workloads.</li>
+            <li>Auto-scaling: Can be triggered to grow or shrink the cluster based on demand or a schedule.</li>
             </ul>
             
             <p>Limitations of horizontal scaling:</p>
@@ -355,9 +324,9 @@
           </section>
 
           <section id="section9" class="learnsection">
-            <h2>How to Distribute Traffic Over a Cluster</h2>
+            <h2>Distribute Traffic Over a Cluster</h2>
 
-            <p>Load balancers are essential components of cloud infrastructure that distribute incoming traffic across multiple servers (VMs). They improve application performance, scalability, and reliability.</p>
+            <p>Load balancers are essential components of cloud infrastructure that distribute incoming traffic across multiple servers (VM). They improve application performance, scalability, and reliability.</p>
             
             <b>Types of Load Balancers</b>
             <ul>
@@ -386,12 +355,12 @@
           </section>
 
           <section id="section10" class="learnsection">
-            <h2>VM vs. Containers vs. Functions</h2>
+            <h2>Various Compute Options</h2>
 
-            <p>Virtual machines (VMs), containers, and functions are all used to isolate and manage applications in cloud environments. However, they have distinct characteristics and use cases.</p>
+            <p>Virtual machines (VM), containers, and functions are all used to isolate and manage applications in cloud environments. However, they have distinct characteristics and use cases.</p>
             
-            <b>Virtual Machines (VMs)</b>
-            <p>VMs are complete virtualized computer systems that include their own operating system, applications, and libraries. They offer the highest level of isolation and control, but can be resource-intensive.</p>
+            <b>Virtual Machines (VM)</b>
+            <p>VM are complete virtualized computer systems that include their own operating system, applications, and libraries. They offer the highest level of isolation and control, but can be resource-intensive.</p>
             
             <b>Containers</b>
             <p>Containers are lightweight, isolated environments that share the host operating system. They package applications and their dependencies into a single unit, making them portable and efficient. Containers are often used for microservices architectures and application development.</p>
@@ -399,6 +368,7 @@
             <b>Functions</b>
             <p>Functions are serverless computing units that execute code in response to events. They are ideal for event-driven applications and don't require ongoing management of infrastructure.</p>
             
+            <p>You will learn more about containers and serverless functions in later programs and courses.</p>
           </section>
 
           <section id="section11" class="learnsection">

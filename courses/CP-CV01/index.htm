@@ -174,15 +174,16 @@
             <p>A rack server is a type of computer server designed to be mounted in a standardized server rack. These
               servers are optimized for space efficiency and are commonly used in data centers to maximize the
               utilization of available space.</p>
+            <p>On the right you have two views of the rack server.  A birds-eye view and a front view.</p>
             <p>Here are some key features:</p>
             <ul class="no-bullets">
               <li>1. Low Profile for Stackability.</li>
-              <li>2. Multiple Storage Bays (HDD/ SSD) 160TB.</li>
+              <li>2. Multiple Storage Bays (HDD/ SSD).</li>
               <li>3. Powerful Cooling Fan System.</li>
-              <li>4. Multiple Memory Slots (RAM) 2TB.</li>
-              <li>5. Dual Central Processing Units (CPUs) 256 cores.</li>
+              <li>4. Multiple Memory Slots (RAM).</li>
+              <li>5. Dual Central Processing Units (CPUs).</li>
               <li>6. Dual Power Supply Units (PSUs).</li>
-              <li>7. Additional PCIe Slots (NICs/GPUs).</li>
+              <li>7. Additional Expansion Slots (NICs/GPUs).</li>
             </ul>
           </section>
 
@@ -191,7 +192,7 @@
 
             <b>Hypervisors</b>
             <p>A hypervisor, also known as a virtual machine monitor (VMM), is software that creates and manages virtual
-              machines (VMs). It acts as a bridge between the physical hardware (rack server) and the virtual environment.
+              machines (VM). It acts as a bridge between the physical hardware (rack server) and the virtual environment.
               Essentially, a hypervisor allows multiple operating systems to run concurrently on a single physical
               server.</p>
 
@@ -206,14 +207,14 @@
 
             <b>Virtual Machines</b>
             <p>A virtual machine (VM) is a software-based emulation of a physical computer system. It operates as if it
-              were a standalone machine, with its own operating system, applications, and network configuration. VMs
+              were a standalone machine, with its own operating system, applications, and network configuration. VM
               rely on a hypervisor to function.</p>
 
             <p>Key characteristics of a virtual machine:</p>
             <ul>
-              <li>Isolation: Each VM operates independently, unaffected by other VMs on the same physical host.</li>
-              <li>Portability: VMs can be easily moved between different physical hosts.</li>
-              <li>Efficiency: Resource sharing among VMs can optimize hardware utilization.</li>
+              <li>Isolation: Each VM operates independently, unaffected by other VM on the same physical host.</li>
+              <li>Portability: VM can be easily moved between different physical hosts.</li>
+              <li>Efficiency: Resource sharing among VM can optimize hardware utilization.</li>
             </ul>
 
             <b>Relationship</b>
@@ -231,26 +232,26 @@
           <section id="section8" class="learnsection">
             <h2>Hypervisor Types</h2>
 
-            <p>Hypervisors are software that create and manage virtual machines (VMs). There are two main types of hypervisors: Type 1 and Type 2.</p>
+            <p>Hypervisors are software that create and manage virtual machines (VM). There are two main types of hypervisors: Type 1 and Type 2.</p>
             
             <b>Type 1 Hypervisor</b>
             <p>A Type 1 hypervisor, also known as a bare-metal hypervisor, runs directly on the physical hardware without an underlying operating system. This provides a more efficient and secure environment for virtual machines.</p>
             
             <p>Examples of Type 1 hypervisors:</p>
             <ul>
-            <li>VMware ESXi</li>
-            <li>Microsoft Hyper-V</li>
-            <li>KVM (Kernel-based Virtual Machine)</li>
+            <li>VMware ESX-i.</li>
+            <li>Microsoft Hyper-V.</li>
+            <li>KVM (Kernel-based Virtual Machine).</li>
             </ul>
             
             <b>Type 2 Hypervisor</b>
-            <p>A Type 2 hypervisor runs as a software application on top of an existing operating system. This approach is often simpler to deploy but can have a performance overhead.  You generally don't see this setup in data centers but normally in home or lab environments at small scale.</p>
+            <p>A Type 2 hypervisor runs as a software application on top of an existing operating system. This approach is often simpler to deploy but can have a performance overhead.  You generally see this setup in development or lab environments at small scale.</p>
             
             <p>Examples of Type 2 hypervisors:</p>
             <ul>
-            <li>Oracle VM VirtualBox</li>
-            <li>Parallels Desktop</li>
-            <li>VMWare Workstation</li>
+            <li>Oracle VM VirtualBox.</li>
+            <li>Parallels Desktop.</li>
+            <li>VMWare Workstation.</li>
             </ul>            
           </section>
 
@@ -341,7 +342,7 @@
                 to manage them through clicks and menus.</li>
               <li>Intuitive navigation: Designed for users with varying technical expertise, offering a simplified
                 experience.</li>
-              <li>Common tasks: Creating, starting, stopping, and deleting VMs; managing storage, networks, and
+              <li>Common tasks: Creating, starting, stopping, and deleting VM; managing storage, networks, and
                 security; monitoring resource utilization.</li>
             </ul>
 
@@ -433,7 +434,7 @@
             <p>Rack servers are optimized for space efficiency and are commonly used in data centers. They are designed to fit into server racks, maximizing space utilization.</p>
             
             <b>Hypervisors and Virtual Machines</b>
-            <p>A hypervisor is software that creates and manages virtual machines (VMs). Virtual machines are software-based emulations of physical computers. Hypervisors enable multiple operating systems to run concurrently on a single physical machine.</p>
+            <p>A hypervisor is software that creates and manages virtual machines (VM). Virtual machines are software-based emulations of physical computers. Hypervisors enable multiple operating systems to run concurrently on a single physical machine.</p>
             
             <b>The Cloud and Its Control Plane</b>
             <p>The cloud is a computing model that delivers IT services, such as software, infrastructure, storage, and databases, over the internet. It is built upon virtualization and software-defined resources.</p>

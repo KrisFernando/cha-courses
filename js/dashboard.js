@@ -1,4 +1,4 @@
-let courses = ["B-CH01", "B-OS01", "B-NB01", "B-SA01", "B-CS01"];
+let courses = ["B-CH01", "B-OS01", "B-NB01", "B-SA01", "B-CS01","CP-CV01"];
 let count = courses.length;
 let cidlist = [];
 
@@ -25,7 +25,11 @@ function getCookie(cname) {
 function startUp() {
     courses.forEach(course => {
         cidlist.push(getCookie(course))
-    });    
+    });
+    if(cidlist[4] == "completed") {
+        document.querySelector("#CP").classList.remove("hide");
+    }
+    console.log("course list: "+cidlist);    
 }
 
 startUp();
@@ -67,6 +71,10 @@ document.querySelectorAll(".start-course").forEach(button => {
 
 function checkCourse(id, cid) {
     index = courses.findIndex((element) => element == id);
+    if(cidlist[4] == "completed") {
+        document.querySelector("#CP").classList.remove("hide");
+    }
+    console.log("course list: "+cidlist);
 
     if(index == 0) {
         return true;
@@ -76,27 +84,4 @@ function checkCourse(id, cid) {
     } else {
         return false;
     }
-
-    /*
-    switch (true) {
-        case (id == "B-CH01"):
-            //begin program path
-            return true;
-        case (id == "B-OS01" && cidlist[0] == "completed"):
-            //do something
-            return true;
-        case (id == "B-NB01" && cidlist[0] == "completed" && cidlist[1] == "completed"):
-            //do something
-            return true;
-        case (id == "B-SA01" && cidlist[0] == "completed" && cidlist[1] == "completed" && cidlist[2] == "completed"):
-            //do something
-            return true;
-        case (id == "B-CS01" && cidlist[0] == "completed" && cidlist[1] == "completed" && cidlist[2] == "completed" && cidlist[3] == "completed"):
-                //do something
-                return true;
-    
-        default:
-            return false;
-    }
-    */
 }

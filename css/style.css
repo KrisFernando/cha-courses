@@ -21,3 +21,11 @@ h5 {
     height: 100%;
     padding: 25px 10px;
 }
+
+.roadmap:not(:first-of-type) {
+    margin-top: 0px;
+}
+
+.hide {
+    display: none;
+}

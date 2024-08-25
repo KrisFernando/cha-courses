@@ -8,7 +8,7 @@ let currentQuestion = 1;
 let prevLock = true;
 let nextLock = false;
 let max = 0;
-let debug = true;
+let debug = false;
 let defaultvoice = 0;
 var lastId;
 let courseCode = getCourseCode();
@@ -29,32 +29,8 @@ function getCourseCode2(){
 }
 
 
-console.log(getCourseCode2());
-console.log(getCourseCode());
-/*
-let imported;
-
-function fetchJSONData() {
-    fetch("data/data.json")
-        .then((res) => {
-            if (!res.ok) {
-                throw new Error
-                    (`HTTP error! Status: ${res.status}`);
-            }
-            return res.json();
-        })
-        .then((data) => {
-            //if (debug) console.log("data: "+JSON.stringify(data));
-            (imported = data);
-        })
-        .catch ((error) =>
-        console.error("Unable to fetch data:", error));
-    }
-fetchJSONData();
-
-if (debug) console.log("learn: "+JSON.stringify(imported));
-*/
-
+if (debug) console.log(getCourseCode2());
+if (debug) console.log(getCourseCode());
 if (debug) console.log("autoplay: " + autoplay);
 
 start();
@@ -89,7 +65,7 @@ document.querySelector("#play").addEventListener("click", () => {
 
 document.querySelector("#stop").addEventListener("click", () => {
     window.speechSynthesis.cancel();
-    console.log(document.cookie);
+    if (debug) console.log(document.cookie);
 })
 
 document.querySelector("#prev").addEventListener("click", () => {
@@ -181,7 +157,7 @@ function updateNav() {
             document.querySelector("#next").classList.remove("disabled");
         }
     } else {
-        console.log("next lock? " + nextLock + " next question? " + checkAnswerCorrect());
+        if (debug) console.log("next lock? " + nextLock + " next question? " + checkAnswerCorrect());
         if (nextLock) {
             document.querySelector("#next").classList.add("disabled");
         } else {
@@ -285,11 +261,11 @@ function removeTags(str) {
         return false;
     else
         str = str.toString();
-    str = str.replaceAll('</li>', '.');
-    str = str.replaceAll('</b>', '.');
-    str = str.replaceAll('</h2>', '.');
-    str = str.replaceAll('</h3>', '.');
-    str = str.replaceAll('</p>', '.');
+    str = str.replaceAll('</li>', '!.');
+    str = str.replaceAll('</b>', '!.');
+    str = str.replaceAll('</h2>', '!.');
+    str = str.replaceAll('</h3>', '!.');
+    str = str.replaceAll('</p>', '!.');
     // Regular expression to identify HTML tags in
     // the input string. Replacing the identified
     // HTML tag with a null string.

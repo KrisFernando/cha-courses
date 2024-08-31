@@ -69,7 +69,7 @@ body {
     min-height: 100% !important;
 }
 
-#content {
+#content, #quizanswers {
     height: calc(100vh - 150px);
 }
 
@@ -420,6 +420,12 @@ canvas#confetti {
 
 @media (max-width: 669px) {
     .carousel-item img {
+        height: 25dvh;
+    }
+    #quizcontent {
+        height: 60dvh;
+    }
+    #quizanswers {
         height: 25dvh;
     }
     #content {

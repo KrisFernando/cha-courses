@@ -1,6 +1,7 @@
 let speech = new SpeechSynthesisUtterance();
 let voices = [];
-let voiceSelect = document.querySelector("#voices")
+let voiceSelect = document.querySelector("#voices");
+let speedSelect = document.querySelector("#speed");
 let autoplay = false;
 let view = "learn";
 let currentSection = 1;
@@ -10,6 +11,7 @@ let nextLock = false;
 let max = 0;
 let debug = false;
 let defaultvoice = 0;
+let defaultspeed = "1";
 var lastId;
 let courseCode = getCourseCode();
 let add = getCourseCode2();
@@ -51,6 +53,13 @@ voiceSelect.addEventListener("change", () => {
     speech.voice = voices[voiceSelect.value];
     if (debug) console.log("voice: "+voiceSelect.value);
     setCookie("voice", voiceSelect.value, "");
+})
+
+speedSelect.addEventListener("change", () => {
+    defaultspeed = speedSelect.value;
+    speech.rate = parseFloat(defaultspeed);
+    if (debug) console.log("speed: "+defaultspeed);
+    setCookie("speed", defaultspeed, "");
 })
 
 document.querySelector("#auto").addEventListener("change", () => {
@@ -195,6 +204,7 @@ function showContent(index) {
             setCookie(courseCode, "completed", "");
         }
     }
+    speedSelect.value = defaultspeed;
     if (autoplay) {
         document.querySelector("#auto").checked = autoplay;
         playSection(index);
@@ -221,6 +231,7 @@ function start() {
     let index = 0;
     window.speechSynthesis.cancel();
     defaultvoice = getCookieVal("voice",0,"i");
+    defaultspeed = getCookieVal("speed","1");
     view = getCookieVal("view","learn");
     autoplay = getCookieVal("autoplay",false,"b");
     currentSection = getCookieVal("L",1,"i");
@@ -232,6 +243,7 @@ function start() {
         index = currentQuestion;
         max = parseInt(document.querySelectorAll(".quiz section h3").length);
     }
+    if (debug) console.log("speed: " + defaultspeed);
     if (debug) console.log(view + " index: " + index + " max: " + max);
     updateTab(view);
     checkNav(index);
@@ -303,10 +315,12 @@ function scrollSmoothTo(elementId) {
 function playSection(offset) {
     let section = 0;
     let content = "";
+    let synth = window.speechSynthesis;
     content = document.querySelector("." + view + " section.active").innerHTML; 
     speech.text = removeTags(content).replace(/\s+/g, " ");
     if(view == "quiz" && (lastword(speech.text) == "Submit")) {speech.text = speech.text.substring(0, speech.text.lastIndexOf(" "))}
     if (debug) console.log("read text:" + speech.text);
+    speech.rate = parseFloat(defaultspeed);
     window.speechSynthesis.speak(speech);
 }
 

@@ -69,6 +69,10 @@ body {
     min-height: 100% !important;
 }
 
+#content {
+    height: calc(100vh - 150px);
+}
+
 .nav-link {
     color: black;
 }
@@ -109,14 +113,14 @@ body {
 
 .controls {
     padding: 10px 0;
+    
 }
 
 .select {
     width: auto;
     padding: 5px;
-    margin-top: 5px;
-    margin-left: 15px;
-    font-size: medium;
+    font-size: medium !important;
+    vertical-align:middle;
 }
 
 .select:hover {
@@ -325,12 +329,11 @@ canvas#confetti {
     }    
     .btn {
         padding: 0.25rem 0.6rem;
-        font-size: 1.2vw;
         height: 35px;
         min-width: 35px;
     }
     .select {
-        font-size: 1.2vw;
+        max-width: 30%;
     }
     .progress {
         font-size: 1.2vw;
@@ -416,8 +419,22 @@ canvas#confetti {
 }
 
 @media (max-width: 669px) {
+    .carousel-item img {
+        height: 25dvh;
+    }
+    #content {
+        height: 60dvh;
+    }
     .nav-link {
         padding: 0.1rem !important;
         font-size: 0.4rem !important;
+    }
+    .align-right {
+        display: none;
+    }
+    .select {
+        max-width: 25px;
+        margin: 0;
+        padding: 0;
     }    
 }

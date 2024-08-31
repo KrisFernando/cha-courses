@@ -462,5 +462,10 @@ canvas#confetti {
         max-width: 20px;
         margin: 0;
         padding: 0;
-    }    
+    }
+    .btn {
+        padding: 0.1rem 0.5rem;
+        height: 32px;
+        width: 32px;
+    }        
 }

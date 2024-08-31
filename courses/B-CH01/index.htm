@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="row h-90 learn">
-      <div class="col-9">
+      <div class="col-12 col-sm-9">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-interval="false"
           data-bs-ride="false" data-bs-touch="false">
           <div class="carousel-inner">
@@ -94,8 +94,8 @@
           </div>
         </div>
       </div>
-      <div class="col-3">
-        <div id="content" class="overflow-auto" style="height: calc(100vh - 150px);">
+      <div class="col-12 col-sm-3">
+        <div id="content" class="overflow-auto">
           <section id="section1" class="learnsection active">
             <h2>Welcome!</h2>
             <p>Here is a quick tutorial before you begin:</p>
@@ -304,7 +304,7 @@
       </div>
     </div>
     <div class="row h-90 quiz hide">
-      <div class="col-9">
+      <div class="col-12 col-sm-9">
         <div id="quizcontent" class="overflow-auto">
           <section id="q1" class="questions active" data-index="1">
             <h3>1) What is the component that temporarily stores data for use by the CPU?</h3>
@@ -465,14 +465,14 @@
           </section>
         </div>
       </div>
-      <div class="col-3">
-        <div class="overflow-auto" style="height: calc(100vh - 140px);">
+      <div class="col-12 col-sm-3">
+        <div id="quizanswers" class="overflow-auto">
           <section id="quizhint"></section>
         </div>
       </div>
     </div>
     <div class="row controls">
-      <div class="col-7">
+      <div class="col-9 col-sm-7">
         <button id="play" type="button" class="btn btn-danger btn-md">
           <i class="fa-solid fa-play"></i>
         </button>
@@ -487,7 +487,14 @@
           data-bs-slide="next">
           <i class="fa-solid fa-arrow-right"></i>
         </button>
-        <select id="voices" class="form-select-lg select"></select>
+        <select id="voices" class="form-select-lg select mx-auto"></select>
+        <select id="speed" class="form-select-lg select  mx-auto">
+          <option value="0.5">0.5x</option>
+          <option value="0.7">0.7x</option>
+          <option value="1">1.0x</option>
+          <option value="1.2">1.2x</option>
+          <option value="1.4">1.4x</option>          
+        </select>
         <button id="fullscreen" type="button" class="btn btn-primary btn-md">
           <i class="fa-solid fa-expand"></i>
         </button>
@@ -498,7 +505,7 @@
           Play On Next
         </label>
       </div>
-      <div class="col-3">
+      <div class="col">
         <div class="progress">
           <div id="progress" class="progress-bar bg-success" role="progressbar">
             0%</div>

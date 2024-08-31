@@ -8,8 +8,14 @@ section {
     padding-right: 10px;
 }
 
+.d-flex {
+    vertical-align: middle !important;
+}
+
 h1 {
     font-size: 24px;
+    line-height: 0.95rem;
+    margin: auto 0;
 }
 
 h2 {
@@ -127,13 +133,18 @@ body {
     cursor: pointer;
 }
 
+.check-input, .form-check-label {
+    vertical-align: middle;
+}
+
 .check-input:hover {
     cursor: pointer;
 }
 
 .progress {
-    height: 40px;
+    height: 100%;
     padding: 0;
+    vertical-align: middle;
 }
 
 .progress-bar {
@@ -328,16 +339,18 @@ canvas#confetti {
         height: 75dvh;
     }    
     .btn {
-        padding: 0.25rem 0.6rem;
+        padding: 0.25rem 0.5rem;
         height: 35px;
-        min-width: 35px;
+        width: 35px;
     }
-    .select {
-        max-width: 30%;
+    #voices {
+        max-width: 25%;
+    }
+    #speed {
+        max-width: 10%;
     }
     .progress {
         font-size: 1.2vw;
-        height: 30px;
     }
     label.box {
         margin-top: 6px;
@@ -434,12 +447,19 @@ canvas#confetti {
     .nav-link {
         padding: 0.1rem !important;
         font-size: 0.4rem !important;
+        line-height: 0.7rem !important;
+        max-width: auto !important;
     }
     .align-right {
         display: none;
     }
-    .select {
+    #voices {
         max-width: 25px;
+        margin: 0;
+        padding: 0;
+    }
+    #speed {
+        max-width: 20px;
         margin: 0;
         padding: 0;
     }    

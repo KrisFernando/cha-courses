@@ -50,12 +50,14 @@ window.speechSynthesis.onvoiceschanged = () => {
 }
 
 voiceSelect.addEventListener("change", () => {
+    window.speechSynthesis.cancel();
     speech.voice = voices[voiceSelect.value];
     if (debug) console.log("voice: "+voiceSelect.value);
     setCookie("voice", voiceSelect.value, "");
 })
 
 speedSelect.addEventListener("change", () => {
+    window.speechSynthesis.cancel();
     defaultspeed = speedSelect.value;
     speech.rate = parseFloat(defaultspeed);
     if (debug) console.log("speed: "+defaultspeed);

@@ -15,6 +15,7 @@ let defaultspeed = "1";
 var lastId;
 let courseCode = getCourseCode();
 let add = getCourseCode2();
+let justloaded = true;
 
 function getCourseCode(){
     let temp = window.location.href.split("/");
@@ -323,7 +324,10 @@ function playSection(offset) {
     if(view == "quiz" && (lastword(speech.text) == "Submit")) {speech.text = speech.text.substring(0, speech.text.lastIndexOf(" "))}
     if (debug) console.log("read text:" + speech.text);
     speech.rate = parseFloat(defaultspeed);
-    window.speechSynthesis.speak(speech);
+    if (justloaded != true) {
+        window.speechSynthesis.speak(speech);
+    }
+    justloaded = false;
 }
 
 function lastword(words) {

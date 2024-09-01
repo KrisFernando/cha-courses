@@ -320,8 +320,8 @@ function playSection(offset) {
     content = document.querySelector("." + view + " section.active").innerHTML; 
     let speechtext = removeTags(content).replace(/\s+/g, " ");
     //speech.text = removeTags(content).replace(/\s+/g, " ");
-    if(view == "quiz" && (lastword(speech.text) == "Submit")) {speech.text = speech.text.substring(0, speech.text.lastIndexOf(" "))}
-    console.log("read text:" + speechtext);
+    if(view == "quiz" && (lastword(speechtext) == "Submit")) {speechtext = speechtext.substring(0, speechtext.lastIndexOf(" "))}
+    console.log("read text:" + speechtext + " lastword:" + speechtext);
     speech.rate = parseFloat(defaultspeed);
     let delay = parseInt(60/parseFloat(defaultspeed));
     console.log("delay:"+delay);
@@ -360,7 +360,6 @@ function speakMessage(speech, message, PAUSE_MS = 500) {
 function lastword(words) {
     var n = words.split(" ");
     return n[n.length - 1];
-
 }
 
 document.querySelector("#learn").addEventListener("click", () => {

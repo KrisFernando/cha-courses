@@ -282,11 +282,11 @@ function removeTags(str) {
         return false;
     else
         str = str.toString();
-    str = str.replaceAll('</li>', '!.');
-    str = str.replaceAll('</b>', '!.');
-    str = str.replaceAll('</h2>', '!.');
-    str = str.replaceAll('</h3>', '!.');
-    str = str.replaceAll('</p>', '!.');
+    str = str.replaceAll('</li>', '###');
+    str = str.replaceAll('</b>', '###');
+    str = str.replaceAll('</h2>', '###');
+    str = str.replaceAll('</h3>', '###');
+    str = str.replaceAll('</p>', '###');
     // Regular expression to identify HTML tags in
     // the input string. Replacing the identified
     // HTML tag with a null string.
@@ -316,19 +316,44 @@ function scrollSmoothTo(elementId) {
 }
 
 function playSection(offset) {
-    let section = 0;
     let content = "";
-    let synth = window.speechSynthesis;
     content = document.querySelector("." + view + " section.active").innerHTML; 
-    speech.text = removeTags(content).replace(/\s+/g, " ");
+    let speechtext = removeTags(content).replace(/\s+/g, " ");
+    //speech.text = removeTags(content).replace(/\s+/g, " ");
     if(view == "quiz" && (lastword(speech.text) == "Submit")) {speech.text = speech.text.substring(0, speech.text.lastIndexOf(" "))}
-    if (debug) console.log("read text:" + speech.text);
+    console.log("read text:" + speechtext);
     speech.rate = parseFloat(defaultspeed);
     if (justloaded != true) {
-        window.speechSynthesis.speak(speech);
+        speakMessage(speech, speechtext, 0);
+        //window.speechSynthesis.speak(speech);
     }
     justloaded = false;
 }
+
+function speakMessage(speech, message, PAUSE_MS = 500) {
+    try {
+      const messageParts = message.split('###')
+  
+      let currentIndex = 0
+      const speak = (textToSpeak) => {
+        speech.text = textToSpeak;
+  
+        speech.onend = function() {
+          currentIndex++;
+          if (currentIndex < messageParts.length) {
+            setTimeout(() => {
+              speak(messageParts[currentIndex])
+            }, PAUSE_MS)
+          }
+        };
+        speechSynthesis.speak(speech);
+      }
+      speak(messageParts[0])
+    } catch (e) {
+      console.error(e)
+    }
+  }
+
 
 function lastword(words) {
     var n = words.split(" ");

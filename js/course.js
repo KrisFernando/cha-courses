@@ -323,8 +323,10 @@ function playSection(offset) {
     if(view == "quiz" && (lastword(speech.text) == "Submit")) {speech.text = speech.text.substring(0, speech.text.lastIndexOf(" "))}
     console.log("read text:" + speechtext);
     speech.rate = parseFloat(defaultspeed);
+    let delay = parseInt(60/parseFloat(defaultspeed));
+    console.log("delay:"+delay);
     if (justloaded != true) {
-        speakMessage(speech, speechtext, 0);
+        speakMessage(speech, speechtext, delay);
         //window.speechSynthesis.speak(speech);
     }
     justloaded = false;

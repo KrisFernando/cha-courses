@@ -16,6 +16,7 @@ var lastId;
 let courseCode = getCourseCode();
 let add = getCourseCode2();
 let justloaded = true;
+let speedlist = [0.7,0.8,0.9,1,1.1,1.20,1.3,1.4,1.5,1.6];
 
 function getCourseCode(){
     let temp = window.location.href.split("/");
@@ -48,6 +49,13 @@ window.speechSynthesis.onvoiceschanged = () => {
     voices.forEach((voice, i) => (voiceSelect.options[i] = new Option(voice.name, i)));
     speech.voice = voices[defaultvoice];
     voiceSelect.value = defaultvoice;
+}
+
+function setSpeedOptions(){
+    for (let i = 0; i < speedlist.length; i++) {
+        item = speedlist[i];
+        speedSelect.options[i] = new Option(item+"x", item);
+      }
 }
 
 voiceSelect.addEventListener("change", () => {
@@ -239,6 +247,7 @@ function start() {
     autoplay = getCookieVal("autoplay",false,"b");
     currentSection = getCookieVal("L",1,"i");
     currentQuestion = 1;
+    setSpeedOptions();    
     if (view == "learn") {
         index = currentSection;
         max = parseInt(document.querySelectorAll(".learn section h2").length);
@@ -282,6 +291,8 @@ function removeTags(str) {
         return false;
     else
         str = str.toString();
+
+    str = str.replaceAll('a)', 'A)');
     str = str.replaceAll('</li>', '###');
     str = str.replaceAll('</b>', '###');
     str = str.replaceAll('</h2>', '###');
@@ -321,10 +332,10 @@ function playSection(offset) {
     let speechtext = removeTags(content).replace(/\s+/g, " ");
     //speech.text = removeTags(content).replace(/\s+/g, " ");
     if(view == "quiz" && (lastword(speechtext) == "Submit")) {speechtext = speechtext.substring(0, speechtext.lastIndexOf(" "))}
-    console.log("read text:" + speechtext + " lastword:" + speechtext);
+    if (debug) console.log("read text:" + speechtext + " lastword:" + speechtext);
     speech.rate = parseFloat(defaultspeed);
     let delay = parseInt(60/parseFloat(defaultspeed));
-    console.log("delay:"+delay);
+    if (debug) console.log("delay:"+delay);
     if (justloaded != true) {
         speakMessage(speech, speechtext, delay);
         //window.speechSynthesis.speak(speech);

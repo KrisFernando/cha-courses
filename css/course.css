@@ -281,6 +281,10 @@ input[type="radio"] {
     display: none;
 }
 
+.quizbutton {
+    display: none;
+}
+
 .submit {
     margin-top: 25px;
 }

@@ -371,44 +371,38 @@ function updateTab(view) {
     }
 }
 
-document.querySelectorAll(".quizbutton").forEach(quizbutton => {
-    let id = quizbutton.id.slice(0, -1);
-    //if (debug) console.log('question' + id);
-    quizbutton.addEventListener("click", () => {
-        for (let i = 1; i <= 4; i++) {
-            let answer = document.querySelector("#" + id + "-" + i);
-            //if (debug) console.log("correct answer: " + answer.classList.contains("correct"));
-            if ((answer.checked == true) && (answer.classList.contains("correct"))) {
-                document.querySelector("#quizhint").innerHTML = "<h4>Result:</h><br/><br/><p>That is the correct answer.</p><p>Please click on the next button in the navigation controls at the bottom left of your screen, to proceed.</p>";
-                document.querySelector("#quizhint").classList.add("correct");
-                document.querySelector("#quizhint").classList.remove("incorrect");
-                document.querySelector("label." + id + "-" + i).classList.add("right");
-                document.querySelector("#" + id).classList.add("right");
-            }
-            if ((answer.checked == true) && (answer.classList.contains("incorrect"))) {
-                document.querySelector("#quizhint").innerHTML = "<h4>Result:</h><br/><br/><p>Unfortunately, that is not the correct answer.</p><p>Please click on the Learning Material tab on the top right of your screen, to review the material for better insights.</p>";
-                document.querySelector("#quizhint").classList.remove("correct");
-                document.querySelector("#quizhint").classList.add("incorrect");
-                document.querySelector("label." + id + "-" + i).classList.add("wrong");
-                document.querySelector("#" + id).classList.remove("right");
-            }
-            updateNav();
-        }
-    });
-})
-
 for (let q = 1; q <= 5; q++) {
     for (let a = 1; a <= 4; a++) {
-        document.querySelector(".q" + q + "-" + a).addEventListener("click", () => {
+        document.querySelector("label.q" + q + "-" + a).addEventListener("click", () => {
             //if (debug) console.log("q" + q + "-" + a + " clicked");
             clearAnswers(q);
             document.querySelector("#q" + q + "-" + a).setAttribute("checked", "checked");
+            let answer = document.querySelector("#q" + q + "-" + a);
+            //if (debug) console.log("correct answer: " + answer.classList.contains("correct"));
+            if (answer.classList.contains("correct")) {
+                document.querySelector("#quizhint").innerHTML = "<h4>Result:</h><br/><br/><p>That is the correct answer.</p><p>Please click on the next button in the navigation controls at the bottom left of your screen, to proceed.</p>";
+                document.querySelector("#quizhint").classList.add("correct");
+                document.querySelector("#quizhint").classList.remove("incorrect");
+                document.querySelector("label.q" + q + "-" + a).classList.add("right");
+                document.querySelector("#q" + q).classList.add("right");
+                //if (debug) console.log("right");
+            }
+            if (answer.classList.contains("incorrect")) {
+                document.querySelector("#quizhint").innerHTML = "<h4>Result:</h><br/><br/><p>Unfortunately, that is not the correct answer.</p><p>Please click on the Learning Material tab on the top right of your screen, to review the material for better insights.</p>";
+                document.querySelector("#quizhint").classList.remove("correct");
+                document.querySelector("#quizhint").classList.add("incorrect");
+                document.querySelector("label.q" + q + "-" + a).classList.add("wrong");
+                document.querySelector("#q" + q).classList.remove("right");
+                //if (debug) console.log("wrong");
+            }
+            updateNav();            
         });
     }
 }
 
 function clearAnswers(id) {
     for (let a = 1; a <= 4; a++) {
+        try { document.querySelector("#q" + id + "-" + a).removeAttribute("checked"); } catch (err) { }
         try { document.querySelector(".q" + id + "-" + a + ".right").classList.remove("right"); } catch (err) { }
         try { document.querySelector(".q" + id + "-" + a + ".wrong").classList.remove("wrong"); } catch (err) { }
     }

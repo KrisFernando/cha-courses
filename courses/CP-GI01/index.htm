@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Title</title>
+  <title>Global Cloud Infrastructure</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"
@@ -13,7 +13,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
-  <link rel="manifest" href="../../img/site.webmanifest">  
+  <link rel="manifest" href="../../img/site.webmanifest">
 </head>
 
 <body class="full-screen">
@@ -24,7 +24,7 @@
           <button id="home" type="button" class="btn btn-primary btn-md">
             <i class="fa fa-home"></i>
           </button>
-          <h1 id="title" style="margin-left: 15px;">Course Title</h1>
+          <h1 id="title" style="margin-left: 15px;">Global Cloud Infrastructure</h1>
         </div>
       </div>
       <div class="col-3">
@@ -82,8 +82,11 @@
             <div id="slide13" class="carousel-item" data-index="13">
               <img src="img/13.jpg" class="d-block w-100" alt="...">
             </div>
-            <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
             <div id="slide14" class="carousel-item" data-index="14">
+              <img src="img/14.jpg" class="d-block w-100" alt="...">
+            </div>            
+            <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+            <div id="slide15" class="carousel-item" data-index="15">
               <img src="../../img/course/tutorials/Knowledge.jpg" class="d-block w-100" alt="...">
             </div>
           </div>
@@ -103,113 +106,250 @@
           </section>
 
           <section id="section2" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
+            <h2>Global Cloud Infrastructure</h2>
+            <p><b>Course Objective</b> This course aims to equip learners with a comprehensive understanding of global
+              cloud infrastructure. Key topics will include the role of data centers in providing cloud services, the
+              concept of availability zones and regions for redundancy and scalability, local redundancy strategies for
+              data protection, high availability techniques to ensure continuous service, and disaster recovery a plan
+              to minimize downtime in case of failures. Learners will gain practical knowledge of how these components
+              work together to deliver reliable and resilient cloud solutions.</p>
+            <br />
+            <br />
+            <p>Author and Designer: Kris Fernando</p>
           </section>
 
           <section id="section3" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Introduction</h2>
+            <p>Cloud computing has revolutionized the way businesses and individuals operate, offering unprecedented
+              scalability, flexibility, and cost-effectiveness. At the heart of this transformation lies a vast and
+              interconnected network of data centers spread across the globe. This global cloud infrastructure enables
+              businesses to access and utilize computing resources on demand, from anywhere in the world.</p>
+            <b>Topics to cover:</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>A Global Presence</li>
+              <li>Data Center</li>
+              <li>Local Redundancy</li>
+              <li>Availability Zones</li>
+              <li>Regions</li>
+              <li>High Availability</li>
+              <li>What are Disasters?</li>
+              <li>Disaster Recovery</li>
+              <li>Edge Locations</li>
             </ul>
           </section>
 
           <section id="section4" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
+            <h2>A Global Presence</h2>
+            <p>Global cloud infrastructure platforms like Microsoft Azure, Amazon Web Services (AWS), and Google Cloud
+              Platform (GCP) have established extensive networks of data centers worldwide. These data centers are
+              strategically located in various regions to ensure low-latency access for customers across the globe. This
+              global reach enables these platforms to offer a wide range of cloud services, including compute, storage,
+              networking, databases, and analytics, to businesses and individuals in different parts of the world. By
+              leveraging this global infrastructure, these cloud providers can deliver scalable, reliable, and compliant
+              cloud solutions to meet the diverse needs of their customers.</p>
           </section>
 
           <section id="section5" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Data Centers</h2>
+            <p>Data centers are the physical foundation of the cloud, housing the servers, storage devices, networking
+              equipment, and other hardware that enable cloud services. These facilities are designed to provide a
+              reliable and secure environment for processing and storing data.</p>
+            <b>Here are some key aspects of data centers:</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>A Large Building/ Warehouse</li>
+              <li>Racks & Rack Servers</li>
+              <li>High Speed Network Access</li>
+              <li>Backup Generators</li>
+              <li>Cooling Systems</li>
+              <li>Security and Surveillance</li>
             </ul>
           </section>
 
           <section id="section6" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Local Redundancy</h2>
+            <p>Local redundancy is a critical aspect of data center design that helps to ensure the continuous
+              availability of cloud services. By duplicating critical components within a data center, organizations can
+              minimize the impact of hardware failures and other disruptions.</p>
+            <b>Here are some common forms of local redundancy:</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Dual Power Supplies: Each server and other equipment within a data center typically has two power
+                supplies. This redundancy ensures that if one power supply fails, the other can continue to provide
+                power.</li>
+              <li>Enhanced Connectivity: Multiple network ports allow a server to connect to multiple networks or
+                subnets simultaneously, improving network flexibility and redundancy.</li>
+              <li>RAID Storage: RAID (Redundant Array of Independent Disks) is a technique used to combine multiple hard
+                drives into a single logical unit. By creating redundant data copies across multiple drives, RAID can
+                protect data from disk failures.</li>
+              <li>Hot-Swappable Components: Many data center components, such as servers and storage devices, are
+                designed to be hot-swappable. This means that they can be replaced without interrupting the system's
+                operation.</li>
+              <li>Redundant Network Switches: Data centers employ redundant network switches to provide multiple paths
+                for data traffic. If one switch fails, the other can take over, minimizing network disruptions.</li>
+              <li>Uninterrupted Operation: Backup power systems, such as generators or uninterruptible power supplies
+                (UPS), can provide continuous power to the data center in the event of a power outage, preventing
+                downtime and data loss.</li>
             </ul>
+            <p>Local redundancy helps to improve the reliability and availability of cloud services. By minimizing the
+              impact of hardware failures, organizations can avoid downtime and ensure that their applications continue
+              to function as expected.</p>
           </section>
 
           <section id="section7" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Availability Zones</h2>
+            <p>Availability zones (AZ) are a fundamental concept in cloud infrastructure that play a crucial role in
+              ensuring high availability and fault tolerance. They represent distinct geographic locations within a
+              region that are physically isolated from each other. This isolation helps to protect against failures that
+              may affect a single data center.</p>
+            <b>Details about Availability Zones:</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>A single or group of Data Centers.</li>
+              <li>Can be separated by a good distance.</li>
+              <li>Connectivity has low latency.</li>
+              <li>Disturbances does not impact them all.</li>
             </ul>
+            <p>By leveraging availability zones, organizations can build highly resilient and reliable cloud
+              infrastructures that can withstand a variety of challenges. </p>
           </section>
 
           <section id="section8" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Regions</h2>
+            <p>In cloud computing, a region is a geographically distinct area where groups of availability zones are
+              located.</p>
+
+            <p>Key characteristics of a region:</p>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Geographic isolation: Regions are physically separated to ensure redundancy and minimize the impact of
+                disasters.</li>
+              <li>Low-latency connectivity: Data centers within a region are interconnected with high-speed networks to
+                provide fast data transfer.</li>
+              <li>Compliance: Regions may adhere to specific data residency or regulatory requirements.</li>
+              <li>Availability zones: Regions are further divided into availability zones to enhance fault tolerance and
+                reliability.</li>
             </ul>
+
+            <p>Benefits of using regions:</p>
+            <ul>
+              <li>Disaster recovery: Multiple regions can be used to replicate data and applications, ensuring business
+                continuity in case of failures.</li>
+              <li>Performance optimization: By selecting a region closer to your users, you can reduce latency and
+                improve application responsiveness.</li>
+              <li>Compliance adherence: Regions can help organizations meet data residency and regulatory requirements.
+              </li>
+            </ul>
+            <p>In conclusion, regions are a fundamental component of cloud infrastructure, providing the geographic and
+              operational foundation for delivering reliable and scalable cloud services.</p>
           </section>
 
           <section id="section9" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>High Availability</h2>
+
+            <p>High availability (HA) in cloud infrastructure refers to the ability of a system to remain operational
+              and accessible even in the face of failures. It ensures that applications and services continue to
+              function without interruption, minimizing downtime and maximizing user experience.</p>
+
+            <p>Availability is usually expressed as a percentage of uptime in a given year. This diagram shows different
+              scenarios of how to use regions and availability zones to increase your availability percentage.</p>
+
+            <p>Key components of high availability:</p>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Redundancy: Having multiple components (servers, storage, networking) to provide alternatives in case
+                of failures.</li>
+              <li>Fault tolerance: The ability of a system to continue operating despite hardware or software failures.
+              </li>
+              <li>Automatic failover: The ability of a system to automatically switch to another server when a failure
+                occurs.</li>
+              <li>Monitoring and management: Continuous monitoring of system health and automated management of
+                failures.</li>
             </ul>
+
+            <p>Benefits of high availability:</p>
+            <ul>
+              <li>Increased uptime: Minimizes downtime and ensures continuous service availability.</li>
+              <li>Improved user experience: Reduces disruptions and enhances user satisfaction.</li>
+              <li>Business continuity: Helps maintain business operations during failures and disasters.</li>
+              <li>Data protection: Protects data from loss due to failures.</li>
+            </ul>
+
+            <p>Achieving high availability in cloud infrastructure often involves:</p>
+            <ul>
+              <li>Using redundant components: Multiple servers, storage devices, and network connections.</li>
+              <li>Implementing load balancing: Distributing traffic across multiple servers to prevent overloading.</li>
+              <li>Leveraging availability zones: Using dispersed data centers to protect against regional failures.</li>
+              <li>Leveraging regions: Using a geographically separated location incase of larger connectivity or failure
+                issues.</li>
+            </ul>
+
+            <p>In conclusion, high availability is a critical aspect of cloud infrastructure, ensuring that applications
+              and services remain accessible and operational even in the face of challenges. By implementing redundant
+              components, fault tolerance, and effective management practices, organizations can significantly enhance
+              their system reliability and resilience.</p>
+
           </section>
 
           <section id="section10" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>What are Disasters?</h2>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Natural Disasters: earthquakes, hurricanes, floods, fires, power outages</li>
+              <li>Human-Caused Disasters: terrorist attacks, acts of war, vandalism, sabotage, accidental damage</li>
+              <li>System Failures: hardware failures, software failures, network failures</li>
+              <li>Data Loss or Corruption: accidental deletion, malware attacks, data corruption due to hardware or
+                software errors</li>
+              <li>Cybersecurity Incidents: data breaches, phishing attacks, distributed denial of service (DDoS) attacks
+              </li>
+              <li>Supply Chain Disruptions: component shortages, manufacturing delays, logistics issues</li>
             </ul>
           </section>
 
           <section id="section11" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Recovery Concepts</h2>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Recovery Time Objective (RTO): This is the maximum amount of time a business can afford to be down after a disaster before it starts to suffer significant financial or reputational damage. For example, an e-commerce website might have an RTO of 4 hours, meaning they can be offline for up to 4 hours before it starts to seriously impact their sales.</li>
+              <li>Recovery Point Objective (RPO): This is the maximum amount of data loss a business can tolerate in the event of a disaster. For example, a company might have an RPO of 2 hours, meaning they can afford to lose up to 2 hours of data.</li>
             </ul>
           </section>
 
           <section id="section12" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
+            <h2>Common Disaster Recovery Approaches</h2>
+
+            <b>1. Backup and Restore</b>
+            <p>
+              The backup and restore approach is one of the simplest and most traditional methods of disaster recovery.
+              It involves regularly creating copies of data and system configurations, which are then stored in a secure
+              location. In the event of a disaster, these backups can be used to restore the system to its previous
+              state. This method is generally cost-effective but may involve significant downtime depending on the size
+              of the data and the speed of the recovery process.
+            </p>
+
+            <b>2. Pilot Light</b>
+            <p>
+              The pilot light approach involves maintaining a minimal version of the system in a secondary location.
+              This setup includes the core infrastructure and essential data needed to restore full operations quickly.
+              In the event of a disaster, additional resources can be rapidly activated to bring the system to a fully
+              operational state. The pilot light approach offers a balance between cost and recovery speed, as it
+              minimizes infrastructure costs while allowing for faster recovery compared to backup and restore.
+            </p>
+
+            <b>3. Warm Standby</b>
+            <p>
+              The warm standby approach involves maintaining a fully operational but scaled-down version of the primary
+              system at a secondary site. This secondary site is kept up-to-date with the primary site’s data and
+              configurations but does not handle the full load of production traffic under normal circumstances. In the
+              event of a disaster, the warm standby system can be quickly scaled up to handle the full workload,
+              offering a faster recovery time compared to the backup and restore approach.
+            </p>
+
+            <b>4. Multi-Site Active/Active</b>
+            <p>
+              The multi-site active/active approach involves running multiple fully operational sites simultaneously.
+              Each site handles a portion of the production workload and is kept in sync with the others. In the event
+              of a disaster at one site, the remaining sites continue to operate without interruption, ensuring high
+              availability and minimal downtime. This approach provides the highest level of fault tolerance and
+              recovery speed but also involves the highest cost and complexity due to the need to maintain multiple
+              active sites.
+            </p>
+
+            <p>The choice of disaster recovery approach depends on factors such as the criticality of the application,
+              budget constraints, and desired recovery time objectives.</p>
           </section>
 
           <section id="section13" class="learnsection">
@@ -221,8 +361,20 @@
               <li></li>
             </ul>
           </section>
-          <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+
           <section id="section14" class="learnsection">
+            <h2></h2>
+            <p></p>
+            <b></b><br />
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </section>
+
+
+          <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+          <section id="section15" class="learnsection">
             <h2>Congratulations!</h2>
             <p>What is next for you? Let's do a knowledge check to see if you completely grasped the concepts you
               just learned.</p>

@@ -9,7 +9,7 @@ let currentQuestion = 1;
 let prevLock = true;
 let nextLock = false;
 let max = 0;
-let debug = false;
+let debug = true;
 let defaultvoice = 0;
 let defaultspeed = "1";
 var lastId;
@@ -81,7 +81,8 @@ document.querySelector("#auto").addEventListener("change", () => {
 
 document.querySelector("#play").addEventListener("click", () => {
     window.speechSynthesis.cancel();
-    playSection(0);
+    justloaded = false;
+    playSection();
 })
 
 document.querySelector("#stop").addEventListener("click", () => {
@@ -218,7 +219,7 @@ function showContent(index) {
     speedSelect.value = defaultspeed;
     if (autoplay) {
         document.querySelector("#auto").checked = autoplay;
-        playSection(index);
+        playSection();
     }    
 }
 
@@ -298,6 +299,7 @@ function removeTags(str) {
     str = str.replaceAll('</h2>', '###');
     str = str.replaceAll('</h3>', '###');
     str = str.replaceAll('</p>', '###');
+    str = str.replaceAll('(HA)', '(H. A.)');
     // Regular expression to identify HTML tags in
     // the input string. Replacing the identified
     // HTML tag with a null string.
@@ -326,7 +328,7 @@ function scrollSmoothTo(elementId) {
     });
 }
 
-function playSection(offset) {
+function playSection() {
     let content = "";
     content = document.querySelector("." + view + " section.active").innerHTML; 
     let speechtext = removeTags(content).replace(/\s+/g, " ");

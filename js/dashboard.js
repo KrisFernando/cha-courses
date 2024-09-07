@@ -1,4 +1,4 @@
-let courses = ["B-CH01", "B-OS01", "B-NB01", "B-SA01", "B-CS01","CP-CV01", "CP-VM01"];
+let courses = ["B-CH01", "B-OS01", "B-NB01", "B-SA01", "B-CS01","CP-CV01", "CP-VM01", "CP-GI01"];
 let count = courses.length;
 let cidlist = [];
 

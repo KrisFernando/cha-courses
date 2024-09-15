@@ -105,8 +105,8 @@
           <section id="section2" class="learnsection">
             <h2>Virtual Networks</h2>
             <p><b>Objective:</b> This course is designed to introduce students to the fundamentals of virtual networks
-              in cloud computing. You will learn about the various components and services offered by cloud providers to
-              facilitate all your networking needs.</p>
+              or networking in cloud computing. You will learn about the various components and services offered by
+              cloud providers to facilitate all your networking needs.</p>
             <p>Topics to cover:</p>
             <ul>
               <li>Introduction</li>
@@ -115,6 +115,7 @@
               <li>Subnets</li>
               <li>Route Tables</li>
               <li>Internet Gateway</li>
+              <li>Network Interfaces</li>
               <li>Elastic IPs</li>
               <li>Network Address Translation (NAT) Gateway</li>
               <li>Private Connection</li>
@@ -128,22 +129,58 @@
           </section>
 
           <section id="section3" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Classless Inter-Domain Routing (CIDR)</h2>
+            <b>IPv4 CIDR Notation</b>
+            <p>In IPv4, CIDR notation is represented as follows:</p>
             <ul>
-              <li></li>
-              <li></li>
+              <li>IP address: The specific address within the network.</li>
+              <li>Slash (/): Separates the IP address from the prefix length.</li>
+              <li>Prefix length: The number of bits used for the network portion of the IP address.</li>
+            </ul>
+
+            <b>Example:</b>
+            <p>192.168.1.0/24: This represents a network with a prefix length of 24 bits. The first 24 bits
+              (192.168.1.0) define the network address, and the remaining 8 bits (0-255) are available for host
+              addresses.</p>
+
+            <b>Sizing and Subnetting</b>
+            <ul>
+              <li>Network Size: The number of hosts in a network is calculated as 2^(32 - prefix length) - 2. The two
+                addresses subtracted are the network address itself and the broadcast address.</li>
+              <li>Subnetting: Dividing a larger network into smaller subnetworks is called subnetting. This is done by
+                borrowing bits from the host portion of the IP address to create additional network bits.</li>
+            </ul>
+
+            <b>Example:</b>
+            <p>192.168.1.0/24: This network can accommodate 254 hosts. If we want to create two subnetworks, we can
+              borrow two bits from the host portion, resulting in a prefix length of 26:</p>
+            <ul>
+              <li>192.168.1.0/26: First subnetwork with 62 hosts.</li>
+              <li>192.168.1.64/26: Second subnetwork with 62 hosts.</li>
+            </ul>
+
+            <b>Summary</b>
+            <ul>
+              <li>CIDR provides a flexible and efficient way to allocate IP addresses.</li>
+              <li>By understanding CIDR notation and how to calculate network sizes, you can effectively design and
+                manage IP address spaces for your virtual networks.</li>
             </ul>
           </section>
 
           <section id="section4" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Virtual Private Cloud (VPC)</h2>
             <ul>
-              <li></li>
-              <li></li>
+              <li>A VPC is a virtual network that provides an isolated environment for your cloud resources within a
+                specific region.</li>
+              <li>It allows you to have private IP address spaces, control security settings, and manage network
+                traffic.</li>
+              <li>VPCs can be customized to meet your specific networking requirements.</li>
+            </ul>
+            <b>Consider the follow for VPCs:</b>
+            <ul>
+              <li>Region: The geographic location where the VPC will be created.</li>
+              <li>CIDR block: The range of IP addresses that will be used within the VPC.</li>
+              <li>Tenancy: Whether the VPC will be default (shared) or dedicated.</li>
             </ul>
           </section>
 

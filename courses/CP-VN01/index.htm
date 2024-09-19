@@ -130,6 +130,11 @@
 
           <section id="section3" class="learnsection">
             <h2>Classless Inter-Domain Routing (CIDR)</h2>
+            <p>An IPv4 (Internet Protocol version 4) address is a 32-bit number that uniquely identifies a device on a
+              network.</p>
+            <p>It's typically written in dotted-decimal notation, consisting of four decimal numbers separated by
+              periods. Each decimal number, ranging from 0 to 255, represents an octet (8 bits) of the address.</p>
+
             <b>IPv4 CIDR Notation</b>
             <p>In IPv4, CIDR notation is represented as follows:</p>
             <ul>
@@ -142,22 +147,6 @@
             <p>192.168.1.0/24: This represents a network with a prefix length of 24 bits. The first 24 bits
               (192.168.1.0) define the network address, and the remaining 8 bits (0-255) are available for host
               addresses.</p>
-
-            <b>Sizing and Subnetting</b>
-            <ul>
-              <li>Network Size: The number of hosts in a network is calculated as 2^(32 - prefix length) - 2. The two
-                addresses subtracted are the network address itself and the broadcast address.</li>
-              <li>Subnetting: Dividing a larger network into smaller subnetworks is called subnetting. This is done by
-                borrowing bits from the host portion of the IP address to create additional network bits.</li>
-            </ul>
-
-            <b>Example:</b>
-            <p>192.168.1.0/24: This network can accommodate 254 hosts. If we want to create two subnetworks, we can
-              borrow two bits from the host portion, resulting in a prefix length of 26:</p>
-            <ul>
-              <li>192.168.1.0/26: First subnetwork with 62 hosts.</li>
-              <li>192.168.1.64/26: Second subnetwork with 62 hosts.</li>
-            </ul>
 
             <b>Summary</b>
             <ul>
@@ -176,7 +165,7 @@
                 traffic.</li>
               <li>VPCs can be customized to meet your specific networking requirements.</li>
             </ul>
-            <b>Consider the follow for VPCs:</b>
+            <b>Consider the following for VPCs:</b>
             <ul>
               <li>Region: The geographic location where the VPC will be created.</li>
               <li>CIDR block: The range of IP addresses that will be used within the VPC.</li>
@@ -185,22 +174,60 @@
           </section>
 
           <section id="section5" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Subnets</h2>
+            <b>Sizing and Subnetting</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Network Size: The number of hosts in a network is calculated as 2^(32 - prefix length) - 2. The two
+                addresses subtracted are the network address itself and the broadcast address.</li>
+              <li>Subnetting: Dividing a larger network into smaller subnetworks is called subnetting. This is done by
+                borrowing bits from the host portion of the IP address to create additional network bits.</li>
+            </ul>
+
+            <b>Example:</b>
+            <p>10.0.0.0/16: This network can accommodate 65,534 hosts. If we want to create three subnets, we can
+              borrow eight bits from the host portion, resulting in a prefix length of 24:</p>
+            <ul>
+              <li>10.0.0.0/24: 1st subnet with 254 hosts</li>
+              <li>10.0.1.0/24: 2nd subnet with 254 hosts</li>
+              <li>10.0.2.0/24: 3rd subnet with 254 hosts</li>
+              <li>We have additional space to create subnets for future use.</li>
             </ul>
           </section>
 
           <section id="section6" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Route Tables</h2>
+
+            <p>Route tables serve as the instruction manuals for routers. They provide a detailed roadmap, outlining the
+              best paths for network traffic to reach its destination. Each route within a table specifies the
+              destination network, the next hop to reach that destination, and the interface to use. Routers consult
+              these tables to determine the most efficient way to forward packets, ensuring that data flows smoothly
+              across the network.</p>
+
+            <b>Understanding Route Tables</b>
+
             <ul>
-              <li></li>
-              <li></li>
+              <li>Route tables are used to determine the path that network traffic should take to reach a specific
+                destination.</li>
+              <li>They contain a set of rules, called routes, that specify the destination network, the next hop to
+                reach that destination, and the interface to use.</li>
+              <li>Route tables are essential for ensuring that network traffic is routed correctly within a VPC.</li>
+            </ul>
+
+            <b>Creating Route Tables</b>
+
+            <ul>
+              <li>To create a route table, you need to specify the VPC it will belong to.</li>
+              <li>You can then add routes to the table to define the paths for different destinations.</li>
+              <li>Route tables are then associated to subnets so that hosts within that subnet have clear routes.</li>
+            </ul>
+
+            <b>Route Table Components</b>
+
+            <p>Route tables consist of the following components:</p>
+            <ul>
+              <li>Destination CIDR block: The network or subnet that the route applies to.</li>
+              <li>Target: The next hop to reach the destination, which can be a gateway, another route table, or an
+                virtual machine.</li>
             </ul>
           </section>
 

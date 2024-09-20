@@ -175,7 +175,7 @@
 
           <section id="section5" class="learnsection">
             <h2>Subnets</h2>
-            <b>Sizing and Subnetting</b>
+            <b>Sizing and Subnetting:</b>
             <ul>
               <li>Network Size: The number of hosts in a network is calculated as 2^(32 - prefix length) - 2. The two
                 addresses subtracted are the network address itself and the broadcast address.</li>
@@ -191,6 +191,12 @@
               <li>10.0.1.0/24: 2nd subnet with 254 hosts</li>
               <li>10.0.2.0/24: 3rd subnet with 254 hosts</li>
               <li>We have additional space to create subnets for future use.</li>
+            </ul>
+
+            <b>Private or Public:</b>
+            <ul>
+              <li>Private Subnet: does not have inbound traffic originating from the public internet.</li>
+              <li>Public Subnet: has inbound traffic originating from the public internet.</li>
             </ul>
           </section>
 
@@ -232,33 +238,71 @@
           </section>
 
           <section id="section7" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Internet Gateways</h2>
+            <b>Understanding Internet Gateways (IGW)</b>
+
             <ul>
-              <li></li>
-              <li></li>
+              <li>An internet gateway is a network appliance that provides connectivity between a VPC and the public
+                internet.</li>
+              <li>It allows instances within the VPC to access resources on the internet and receive incoming traffic
+                from the internet.</li>
+              <li>Internet gateways are essential for enabling communication between your VPC and the outside world.
+              </li>
             </ul>
+
+            <b>Using an Internet Gateway</b>
+            <ol>
+              <li>Create an Internet Gateway (IGW).</li>
+              <li>Attach it to a Virtual Private Cloud (VPC).</li>
+              <li>Create a route in a Route Table to the IGW.</li>
+              <li>Associate the Route Table to a Subnet.</li>
+            </ol>
+
+            <b>Public Subnet:</b>
+            <p>Earlier we discussed that public subnets allow inbound traffic from the public internet. Therefore, once
+              you create a route in a Route Table to the IGW and associate that Route Table to a Subnet. The Subnet
+              becomes a Public Subnet.</p>
           </section>
 
           <section id="section8" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Elastic IP (EIP)</h2>
+            <p>When a Virtual Machine is created in a Public Subnet, it can be given a Public IP address. These Public
+              IP addresses are owned by the Cloud Provider and could change upon rebooting your VM. Changing IP
+              addresses can be a problem if this is how we route traffic to the VM.</p>
+            <p>An Elastic IP (EIP) is a reserved static public IP address and can be kept even once the VM is rebooted,
+              shutdown, or terminated. It can be reassigned to another VM.</p>
+            <b>Elastic IPs can be used in various scenarios, including:</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Load balancing: Distributing traffic across multiple instances using a load balancer.</li>
+              <li>Web servers: Providing a consistent public IP address for a web server.</li>
+              <li>VPN connections: Establishing VPN connections between your VPC and an on-premises network.</li>
             </ul>
           </section>
 
           <section id="section9" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>NAT Gateways</h2>
+            <b>Understanding NAT Gateways</b>
             <ul>
-              <li></li>
-              <li></li>
+              <li>A NAT gateway is a network appliance that performs network address translation (NAT) for instances
+                within a VPC.</li>
+              <li>It allows instances to use private IP addresses to access the internet while using a single public IP
+                address for outbound connections.</li>
+              <li>NAT gateways are useful for reducing the number of public IP addresses required for a VPC.</li>
             </ul>
+
+            <b>Using an NAT Gateway</b>
+            <ol>
+              <li>Create an NAT Gateway.</li>
+              <li>Attach it to a Virtual Private Cloud (VPC).</li>
+              <li>Create a route in a Route Table to the NAT Gateway.</li>
+              <li>Associate the Route Table to a Subnet.</li>
+            </ol>
+
+            <b>Private Subnet:</b>
+            <p>Earlier we discussed that Private Subnets do not allow inbound traffic from the public internet. But in
+              some situations servers in Private Subnets require access to download patches and updates from the public
+              internet. By create a route to a NAT Gateway, the Private Subnet uses NAT to allow outbound communication (egress)
+              to the public internet.</p>
           </section>
 
           <section id="section10" class="learnsection">

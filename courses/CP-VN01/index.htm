@@ -115,12 +115,11 @@
               <li>Subnets</li>
               <li>Route Tables</li>
               <li>Internet Gateway</li>
-              <li>Network Interfaces</li>
               <li>Elastic IPs</li>
               <li>Network Address Translation (NAT) Gateway</li>
-              <li>Private Connection</li>
               <li>Endpoints</li>
               <li>VPC Peering</li>
+              <li>Private Connection</li>
               <li>Transit Gateway</li>
             </ul>
             <br />
@@ -301,49 +300,78 @@
             <b>Private Subnet:</b>
             <p>Earlier we discussed that Private Subnets do not allow inbound traffic from the public internet. But in
               some situations servers in Private Subnets require access to download patches and updates from the public
-              internet. By create a route to a NAT Gateway, the Private Subnet uses NAT to allow outbound communication (egress)
+              internet. By create a route to a NAT Gateway, the Private Subnet uses NAT to allow outbound communication
+              (egress)
               to the public internet.</p>
           </section>
 
           <section id="section10" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Cloud Endpoints</h2>
+            <p>Cloud Endpoints provide a method to connect your cloud resources to other cloud services. By default,
+              public endpoints are availble to all cloud services but requests travel over the public internet.
+              Alternatively, creating private endpoints allow improved security as communication is within the private
+              network.</p>
+            <b>Cloud Endpoint Types</b>
+            <p>There are three main types of cloud endpoints:</p>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Public endpoint: Provides public access to all cloud services via the public internet.</li>
+              <li>Interface endpoint: Provides private access via a private IP address to specific services.</li>
+              <li>Gateway endpoint: Provides private access via a list of private IP ranges used by the specific
+                services, such as Amazon S3 and Amazon DynamoDB.</li>
             </ul>
           </section>
 
           <section id="section11" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
+            <h2>VPC Peering</h2>
           </section>
 
           <section id="section12" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
+            <h2>Private Connections</h2>
+
+            <p>The following are 2 types of private connections to the cloud:</p>
             <ul>
-              <li></li>
-              <li></li>
+              <li>Direct Connect</li>
+              <li>VPN</li>
+            </ul>
+
+            <b>Direct Connect</b>
+            <ul>
+              <li>Direct Connect is a dedicated, private network connection between your on-premises data center and
+                the cloud provider.</li>
+              <li>It provides a high-performance and low-latency connection for transferring data between your
+                on-premises environment and your cloud resources.</li>
+              <li>Direct Connect is ideal for applications that require high bandwidth, low latency, or security.</li>
+            </ul>
+
+            <b>VPN</b>
+            <ul>
+              <li>A VPN (Virtual Private Network) is a secure, encrypted connection between your on-premises network and
+                cloud using a public internet connection.</li>
+              <li>VPNs can be used to create a private tunnel between your networks, allowing you to securely access
+                cloud
+                resources from your on-premises environment.</li>
+            </ul>
+
+            <p>There are two main types of VPNs:</p>
+            <b>Site-to-Site VPN</b>
+            <ul>
+              <li>A site-to-site VPN connects your on-premises network to a VPC.</li>
+              <li>It requires a VPN gateway on both sides of the connection.</li>
+              <li>Site-to-site VPNs are suitable for connecting entire networks together.</li>
+            </ul>
+
+            <b>Client VPN</b>
+            <ul>
+              <li>A client VPN allows individual users to connect to a VPC from their devices.</li>
+              <li>It requires a client VPN endpoint in the cloud and a VPN client on the user's device.</li>
+              <li>Client VPNs are suitable for remote access to cloud resources.</li>
             </ul>
           </section>
 
           <section id="section13" class="learnsection">
-            <h2></h2>
-            <p></p>
-            <b></b><br />
-            <ul>
-              <li></li>
-              <li></li>
-            </ul>
+            <h2>Transit Gateway</h2>
           </section>
+
           <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
           <section id="section14" class="learnsection">
             <h2>Congratulations!</h2>

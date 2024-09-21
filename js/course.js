@@ -16,20 +16,20 @@ var lastId;
 let courseCode = getCourseCode();
 let add = getCourseCode2();
 let justloaded = true;
-let speedlist = [0.7,0.8,0.9,1,1.1,1.20,1.3,1.4,1.5,1.6];
+let speedlist = [0.7, 0.8, 0.9, 1, 1.1, 1.20, 1.3, 1.4, 1.5, 1.6];
 
-function getCourseCode(){
+function getCourseCode() {
     let temp = window.location.href.split("/");
-    return temp[temp.length-2];    
+    return temp[temp.length - 2];
 }
 
-function getCourseCode2(){
+function getCourseCode2() {
     let temp = window.location.href.split("/");
-    if (temp[temp.length-4] == "cha-courses") {
+    if (temp[temp.length - 4] == "cha-courses") {
         return "cha-courses/";
     } else {
         return "";
-    }   
+    }
 }
 
 
@@ -51,17 +51,17 @@ window.speechSynthesis.onvoiceschanged = () => {
     voiceSelect.value = defaultvoice;
 }
 
-function setSpeedOptions(){
+function setSpeedOptions() {
     for (let i = 0; i < speedlist.length; i++) {
         item = speedlist[i];
-        speedSelect.options[i] = new Option(item+"x", item);
-      }
+        speedSelect.options[i] = new Option(item + "x", item);
+    }
 }
 
 voiceSelect.addEventListener("change", () => {
     window.speechSynthesis.cancel();
     speech.voice = voices[voiceSelect.value];
-    if (debug) console.log("voice: "+voiceSelect.value);
+    if (debug) console.log("voice: " + voiceSelect.value);
     setCookie("voice", voiceSelect.value, "");
 })
 
@@ -69,7 +69,7 @@ speedSelect.addEventListener("change", () => {
     window.speechSynthesis.cancel();
     defaultspeed = speedSelect.value;
     speech.rate = parseFloat(defaultspeed);
-    if (debug) console.log("speed: "+defaultspeed);
+    if (debug) console.log("speed: " + defaultspeed);
     setCookie("speed", defaultspeed, "");
 })
 
@@ -158,12 +158,12 @@ function checkNav(index) {
 }
 
 function learningComplete(index) {
-    lock = getCookieVal("QLock","true");
+    lock = getCookieVal("QLock", "true");
     if (index == max && view == "learn") {
         document.querySelector("#quiz").classList.remove("disabled");
-        setCookie("QLock", "false", add+"courses/"+courseCode);
+        setCookie("QLock", "false", add + "courses/" + courseCode);
     }
-    if(lock == "false") { document.querySelector("#quiz").classList.remove("disabled"); }
+    if (lock == "false") { document.querySelector("#quiz").classList.remove("disabled"); }
 }
 
 function updateNav() {
@@ -204,15 +204,15 @@ function showContent(index) {
         document.querySelector("#section" + parseInt(index)).classList.add("active");
         document.querySelector("#content").scrollTop = 0;
         currentSection = parseInt(index);
-        setCookie("L", index, add+"courses/"+courseCode);
+        setCookie("L", index, add + "courses/" + courseCode);
         if (debug) console.log("setcookie/ current: section" + index + " " + courseCode + " " + (currentSection));
     } else {
         document.querySelector(".questions.active").classList.remove("active");
         document.querySelector("#q" + parseInt(index)).classList.add("active");
         currentQuestion = parseInt(index);
         if (debug) console.log("current: question" + (currentQuestion));
-        if (index == max) { 
-            celebrate(); 
+        if (index == max) {
+            celebrate();
             setCookie(courseCode, "completed", "");
         }
     }
@@ -220,20 +220,20 @@ function showContent(index) {
     if (autoplay) {
         document.querySelector("#auto").checked = autoplay;
         playSection();
-    }    
+    }
 }
 
-function getCookieVal(input, def, type = "s"){
+function getCookieVal(input, def, type = "s") {
     cookie = getCookie(input);
-    if(cookie == "" ) {
+    if (cookie == "") {
         return def;
     } else {
-        if(type == "s") {
+        if (type == "s") {
             return cookie;
-        } else if(type == "b") {
+        } else if (type == "b") {
             return (cookie === "true");
         }
-         else {
+        else {
             return parseInt(cookie);
         }
     }
@@ -242,13 +242,13 @@ function getCookieVal(input, def, type = "s"){
 function start() {
     let index = 0;
     window.speechSynthesis.cancel();
-    defaultvoice = getCookieVal("voice",0,"i");
-    defaultspeed = getCookieVal("speed","1");
-    view = getCookieVal("view","learn");
-    autoplay = getCookieVal("autoplay",false,"b");
-    currentSection = getCookieVal("L",1,"i");
+    defaultvoice = getCookieVal("voice", 0, "i");
+    defaultspeed = getCookieVal("speed", "1");
+    view = getCookieVal("view", "learn");
+    autoplay = getCookieVal("autoplay", false, "b");
+    currentSection = getCookieVal("L", 1, "i");
     currentQuestion = 1;
-    setSpeedOptions();    
+    setSpeedOptions();
     if (view == "learn") {
         index = currentSection;
         max = parseInt(document.querySelectorAll(".learn section h2").length);
@@ -261,7 +261,7 @@ function start() {
     updateTab(view);
     checkNav(index);
     updateProcessBar(index);
-    showContent(index);    
+    showContent(index);
 }
 
 function updateProcessBar(section) {
@@ -293,6 +293,7 @@ function removeTags(str) {
     else
         str = str.toString();
 
+    str = str.replaceAll('AZ', 'A.Z.');
     str = str.replaceAll('a)', 'A)');
     str = str.replaceAll('</li>', '###');
     str = str.replaceAll('</b>', '###');
@@ -306,18 +307,18 @@ function removeTags(str) {
     return str.replace(/(<([^>]+)>)/ig, '').trim();
 }
 
-document.querySelectorAll('ul.no-bullets li').forEach( element => { 
+document.querySelectorAll('ul.no-bullets li').forEach(element => {
     let prefix = element.innerHTML.split('.')[0];
-    if(element.innerHTML.indexOf('.') > 0) { element.innerHTML = element.innerHTML.replace(prefix+".", `<b>` + prefix+"." + `</b>`) }
+    if (element.innerHTML.indexOf('.') > 0) { element.innerHTML = element.innerHTML.replace(prefix + ".", `<b>` + prefix + "." + `</b>`) }
 })
 
-document.querySelectorAll('ul li').forEach( element => { 
+document.querySelectorAll('ul li').forEach(element => {
     let prefix = element.innerHTML.split(':')[0];
     //console.log("indexOf ':'"+ element.innerHTML.indexOf(':') + " no-bullets:"+(!element.classList.contains("no-bullets")))
     if (!element.parentElement.classList.contains("no-bullets")) {
         //console.log(element.innerHTML+" indexOf ':'"+ element.innerHTML.indexOf(':') + " no-bullets:"+(element.classList.contains("no-bullets")))
-        if(element.innerHTML.indexOf(':') > 0) {element.innerHTML = element.innerHTML.replace(prefix+":", `<b>` + prefix+":" + `</b>`)}
-    } 
+        if (element.innerHTML.indexOf(':') > 0) { element.innerHTML = element.innerHTML.replace(prefix + ":", `<b>` + prefix + ":" + `</b>`) }
+    }
 })
 
 function scrollSmoothTo(elementId) {
@@ -330,14 +331,14 @@ function scrollSmoothTo(elementId) {
 
 function playSection() {
     let content = "";
-    content = document.querySelector("." + view + " section.active").innerHTML; 
+    content = document.querySelector("." + view + " section.active").innerHTML;
     let speechtext = removeTags(content).replace(/\s+/g, " ");
     //speech.text = removeTags(content).replace(/\s+/g, " ");
-    if(view == "quiz" && (lastword(speechtext) == "Submit")) {speechtext = speechtext.substring(0, speechtext.lastIndexOf(" "))}
+    if (view == "quiz" && (lastword(speechtext) == "Submit")) { speechtext = speechtext.substring(0, speechtext.lastIndexOf(" ")) }
     if (debug) console.log("read text:" + speechtext + " lastword:" + speechtext);
     speech.rate = parseFloat(defaultspeed);
-    let delay = parseInt(60/parseFloat(defaultspeed));
-    if (debug) console.log("delay:"+delay);
+    let delay = parseInt(60 / parseFloat(defaultspeed));
+    if (debug) console.log("delay:" + delay);
     if (justloaded != true) {
         speakMessage(speech, speechtext, delay);
         //window.speechSynthesis.speak(speech);
@@ -347,27 +348,27 @@ function playSection() {
 
 function speakMessage(speech, message, PAUSE_MS = 500) {
     try {
-      const messageParts = message.split('###')
-  
-      let currentIndex = 0
-      const speak = (textToSpeak) => {
-        speech.text = textToSpeak;
-  
-        speech.onend = function() {
-          currentIndex++;
-          if (currentIndex < messageParts.length) {
-            setTimeout(() => {
-              speak(messageParts[currentIndex])
-            }, PAUSE_MS)
-          }
-        };
-        speechSynthesis.speak(speech);
-      }
-      speak(messageParts[0])
+        const messageParts = message.split('###')
+
+        let currentIndex = 0
+        const speak = (textToSpeak) => {
+            speech.text = textToSpeak;
+
+            speech.onend = function () {
+                currentIndex++;
+                if (currentIndex < messageParts.length) {
+                    setTimeout(() => {
+                        speak(messageParts[currentIndex])
+                    }, PAUSE_MS)
+                }
+            };
+            speechSynthesis.speak(speech);
+        }
+        speak(messageParts[0])
     } catch (e) {
-      console.error(e)
+        console.error(e)
     }
-  }
+}
 
 
 function lastword(words) {
@@ -384,7 +385,7 @@ document.querySelector("#learn").addEventListener("click", () => {
     checkNav(currentSection);
     showContent(currentSection);
     updateProcessBar(currentSection);
-    setCookie("view","learn",add+"courses/"+courseCode);
+    setCookie("view", "learn", add + "courses/" + courseCode);
 })
 
 document.querySelector("#quiz").addEventListener("click", () => {
@@ -396,7 +397,7 @@ document.querySelector("#quiz").addEventListener("click", () => {
     checkNav(currentQuestion);
     showContent(currentQuestion);
     updateProcessBar(currentQuestion);
-    setCookie("view","quiz",add+"courses/"+courseCode);
+    setCookie("view", "quiz", add + "courses/" + courseCode);
 })
 
 function updateTab(view) {
@@ -438,7 +439,7 @@ for (let q = 1; q <= 5; q++) {
                 document.querySelector("#q" + q).classList.remove("right");
                 //if (debug) console.log("wrong");
             }
-            updateNav();            
+            updateNav();
         });
     }
 }
@@ -461,7 +462,7 @@ function celebrate() {
 }
 
 function setCookie(cname, cvalue, path) {
-    document.cookie = cname + "=" + cvalue + "; SameSite=None; Secure; expires=1 Jan 2030 12:00:00 UTC; path=/"+path+";";
+    document.cookie = cname + "=" + cvalue + "; SameSite=None; Secure; expires=1 Jan 2030 12:00:00 UTC; path=/" + path + ";";
 }
 
 function getCookie(cname) {

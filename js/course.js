@@ -270,6 +270,7 @@ function updateProcessBar(section) {
         currentSection = section;
         current = currentSection;
         max = parseInt(document.querySelectorAll(".learn section h2").length);
+        console.log("max:"+max);
     } else {
         currentQuestion = section;
         current = currentQuestion;

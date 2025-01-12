@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/course.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png">
+  <link rel="manifest" href="../../img/site.webmanifest">
+</head>
+
+<body class="full-screen">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-9">
+        <div class="d-flex">
+          <button id="home" type="button" class="btn btn-primary btn-md">
+            <i class="fa fa-home"></i>
+          </button>
+          <h1 id="title" style="margin-left: 15px;">Cloud Storage</h1>
+        </div>
+      </div>
+      <div class="col-3">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a id="learn" class="nav-link active">Learning Material</a>
+          </li>
+          <li class="nav-item">
+            <a id="quiz" class="nav-link disabled">Knowledge Check</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row h-90 learn">
+      <div class="col-12 col-sm-9">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-interval="false"
+          data-bs-ride="false" data-bs-touch="false">
+          <div class="carousel-inner">
+            <div id="slide1" class="carousel-item active" data-index="1">
+              <img src="../../img/course/tutorials/Learning.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide2" class="carousel-item" data-index="2">
+              <img src="img/2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide3" class="carousel-item" data-index="3">
+              <img src="img/3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide4" class="carousel-item" data-index="4">
+              <img src="img/4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide5" class="carousel-item" data-index="5">
+              <img src="img/5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide6" class="carousel-item" data-index="6">
+              <img src="img/6.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide7" class="carousel-item" data-index="7">
+              <img src="img/7.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide8" class="carousel-item" data-index="8">
+              <img src="img/8.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide9" class="carousel-item" data-index="9">
+              <img src="img/9.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide10" class="carousel-item" data-index="10">
+              <img src="img/10.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide11" class="carousel-item" data-index="11">
+              <img src="img/11.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide12" class="carousel-item" data-index="12">
+              <img src="img/12.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide13" class="carousel-item" data-index="13">
+              <img src="img/13.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide14" class="carousel-item" data-index="14">
+              <img src="img/14.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div id="slide15" class="carousel-item" data-index="15">
+              <img src="img/15.jpg" class="d-block w-100" alt="...">
+            </div>
+            <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+            <div id="slide16" class="carousel-item" data-index="16">
+              <img src="../../img/course/tutorials/Knowledge.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-3">
+        <div id="content" class="overflow-auto">
+          <section id="section1" class="learnsection active">
+            <h2>Welcome!</h2>
+            <p>Here is a quick tutorial before you begin:</p>
+            <ul class="no-bullets">
+              <li>1. Press the Play button to listen to the content</li>
+              <li>2. Press the Stop button to stop the audio</li>
+              <li>3. Press the Backward arrow button to go to the previous slide</li>
+              <li>4. Press the Next arrow button to go to the next slide</li>
+            </ul>
+          </section>
+
+          <section id="section2" class="learnsection">
+            <h2>Cloud Storage</h2>
+            <p><b>Course Objective</b> This course aims to provide a comprehensive understanding of distributed cloud
+              storage technologies and their applications for various use cases.</p>
+            <br />
+            <br />
+            <p>Designer: Yunika Giles</p>
+            <p>Author: Kongor Emmanuel and Kris Fernando</p>
+          </section>
+
+          <section id="section3" class="learnsection">
+            <h2>Introduction</h2>
+            <p>Cloud storage has revolutionized the way businesses manage and store data. By offering scalable,
+              reliable, cost-effective storage solutions, and empowering organizations.</p>
+            <b>Topics to cover:</b>
+            <ul>
+              <li>RAID</li>
+              <li>What is Cloud Storage?</li>
+              <li>Benefits of Cloud Storage</li>
+              <li>Instance Storage</li>
+              <li>Block Storage</li>
+              <li>Thin Provisioning</li>
+              <li>File Shares</li>
+              <li>Object Storage</li>
+              <li>Storage Classes</li>
+              <li>Data Lifecycle Management</li>
+              <li>Data Replication</li>
+              <li>Big Data Storage</li>
+            </ul>
+          </section>
+
+          <section id="section4" class="learnsection">
+            <h2>What is RAID?</h2>
+
+            <p>RAID stands for Redundant Array of Independent Disks (or sometimes Redundant Array of Inexpensive Disks).
+              It's a technology that combines multiple physical hard drives into a single logical unit. This is done to
+              improve performance, increase storage capacity, and/or provide data redundancy (fault tolerance). Instead
+              of your computer seeing several separate drives, it sees one large, faster, and/or more reliable drive.
+            </p>
+
+            <b>Why Use RAID?</b>
+
+            <p>The primary reasons for using RAID are:</p>
+            <ul>
+              <li>Performance: Some RAID levels improve read and write speeds by distributing data across multiple
+                drives.</li>
+              <li>Redundancy (Fault Tolerance): Other RAID levels provide protection against data loss in case a drive
+                fails. This is achieved by mirroring or parity.</li>
+              <li>Increased Capacity: Combining multiple drives effectively increases the total storage capacity
+                available.</li>
+            </ul>
+
+            <b>Common RAID Levels</b>
+
+            <p>There are several different RAID levels, each with its own characteristics and trade-offs. Here are some
+              of the most common ones:</p>
+
+            <ul>
+              <li>RAID 0 (Striping):</li>
+              <ul>
+                <li>Data is split ("striped") across multiple drives.</li>
+                <li>Increases performance (both read and write).</li>
+                <li><b>No redundancy.</b> If one drive fails, all data is lost.</li>
+                <li>Minimum of 2 drives required.</li>
+              </ul>
+              <li>RAID 1 (Mirroring):</li>
+              <ul>
+                <li>Data is duplicated ("mirrored") onto multiple drives.</li>
+                <li>Provides excellent redundancy. If one drive fails, the other(s) contain an identical copy of the
+                  data.</li>
+                <li>Read performance can improve, but write performance may be slightly slower.</li>
+                <li>Storage capacity is effectively halved (you only get the capacity of one drive, even if you have
+                  multiple).</li>
+                <li>Minimum of 2 drives required.</li>
+              </ul>
+              <li>RAID 5 (Striping with Parity):</li>
+              <ul>
+                <li>Data is striped across multiple drives, and parity information is also distributed across the
+                  drives.</li>
+                <li>Provides a good balance of performance and redundancy.</li>
+                <li>If one drive fails, the data can be reconstructed using the parity information.</li>
+                <li>Requires at least 3 drives.</li>
+              </ul>
+              <li>RAID 10 (1+0) (Mirroring and Striping):</li>
+              <ul>
+                <li>Combines mirroring (RAID 1) and striping (RAID 0).</li>
+                <li>Provides both high performance and high redundancy.</li>
+                <li>Requires a minimum of 4 drives (in pairs).</li>
+                <li>More expensive due to the higher number of drives required but provides the best of both worlds.
+                </li>
+              </ul>
+            </ul>
+          </section>
+
+          <section id="section5" class="learnsection">
+            <h2>What is Cloud Storage?</h2>
+
+            <p>Cloud storage is a way to save digital data to a network of remote servers instead of directly on your
+              computer, phone, or other device. These servers are managed by a third-party provider (like Google,
+              Amazon, or Microsoft) who owns and maintains the physical infrastructure. You access your data over the
+              internet, anytime and from anywhere with an internet connection.</p>
+
+            <b>How Does it Work?</b>
+
+            <p>When you store data in the cloud, it's uploaded to data centers containing numerous servers. The cloud
+              provider replicates your data across multiple servers and even multiple locations (data centers) for
+              redundancy and data protection. When you need to access your data, you connect to the provider's servers
+              through the internet, and they deliver the data to you.</p>
+
+            <b>Types of Cloud Storage</b>
+
+            <p>There are several main types of cloud storage:</p>
+
+            <ul>
+              <li>Instance storage (ephemeral/local storage): Temporary block storage
+                directly and physically attached to a virtual machine (VM) instance in the cloud.
+              <li>Block Storage: Divides data into blocks and stores them independently. Offers high performance and is
+                ideal for databases and applications that require low latency.</li>
+              <li>File Storage: Organizes data in a hierarchical file system (folders and files), similar to how your
+                computer's hard drive works. Suitable for applications that require shared file access (like network
+                file shares).</li>
+              <li>Object Storage: Stores data as objects (files) along with metadata (information about the data). Ideal
+                for unstructured data like images, videos, and backups. Highly scalable and cost-effective.</li>
+            </ul>
+          </section>
+
+          <section id="section6" class="learnsection">
+            <h2>Benefits of Cloud Storage</h2>
+
+            <p>Cloud storage offers enhanced accessibility by enabling data access from anywhere with an internet
+              connection, while its inherent flexibility allows users to easily scale storage capacity up or down based
+              on their evolving needs.</p>
+
+            <ul>
+              <li>Accessibility: Access your data from anywhere with an internet connection.</li>
+              <li>Scalability: Easily increase or decrease storage capacity as needed.</li>
+              <li>Cost Savings: Often eliminates the need for expensive hardware and IT maintenance.</li>
+              <li>Data Backup and Recovery: Provides built-in redundancy and disaster recovery options.</li>
+              <li>Collaboration: Facilitates easy sharing and collaboration on files.</li>
+            </ul>
+          </section>
+
+          <section id="section7" class="learnsection">
+            <h2>Instance Storage</h2>
+
+            <p>Instance storage, also known as ephemeral or local storage, is temporary storage directly attached to a
+              cloud virtual machine (VM). It's located on the same physical server as the VM, providing very fast read
+              and write speeds. However, data on instance storage is lost when the VM is stopped, terminated, or
+              experiences a hardware failure.</p>
+
+            <b>Key Characteristics</b>
+
+            <ul>
+              <li>High Performance: Offers very low latency and high input/output operations per second (IOPS).</li>
+              <li>Ephemeral: Data is not persistent and is lost when the instance is stopped or terminated.</li>
+              <li>Locally Attached: Physically connected to the same host server as the VM.</li>
+              <li>Temporary: Designed for temporary data and not long-term storage.</li>
+            </ul>
+
+            <b>Use Cases</b>
+
+            <p>Instance storage is suitable for temporary data that doesn't need to persist across instance restarts:
+            </p>
+
+            <ul>
+              <li>Caches: Storing frequently accessed data for faster retrieval.</li>
+              <li>Buffers: Temporarily holding data during processing.</li>
+              <li>Scratch Space: Providing temporary working space for applications.</li>
+              <li>Temporary Files: Storing temporary files created by applications.</li>
+            </ul>
+
+            <b>Important Considerations</b>
+
+            <p>Because instance storage is ephemeral, it's crucial not to store important, irreplaceable data on it. For
+              persistent storage, use block storage volumes (like AWS EBS, Azure Disks, or GCP Persistent Disks) or
+              object storage services.</p>
+          </section>
+
+          <section id="section8" class="learnsection">
+            <h2>Block Storage</h2>
+
+            <p>Block storage is a way of storing data in fixed-size blocks, each with its own unique identifier. These
+              blocks are then stored independently, and the storage system manages how and where they are stored on the
+              physical storage devices. This allows for very efficient data access and retrieval, making it suitable for
+              high-performance applications and databases.</p>
+
+            <b>Key Characteristics</b>
+
+            <ul>
+              <li>Raw Storage: Provides raw, unformatted storage that can be formatted with any file system.</li>
+              <li>High Performance: Offers very low latency and high IOPS (Input/Output Operations Per Second).</li>
+              <li>Efficient Data Access: Data can be accessed directly by its block identifier, leading to fast
+                retrieval.</li>
+              <li>Persistent: Data remains stored even if the attached instance is stopped or terminated.</li>
+            </ul>
+
+            <b>How it Works</b>
+
+            <p>When an application needs to write data, the block storage system divides the data into blocks and
+              assigns each block a unique identifier. These blocks are then stored across the available physical
+              storage. When the application needs to read data, it requests the specific blocks by their identifiers,
+              and the storage system retrieves them. The operating system on the attached instance is responsible for
+              managing the file system on the block storage volume.</p>
+
+            <b>Use Cases</b>
+
+            <p>Block storage is ideal for:</p>
+
+            <ul>
+              <li>Databases: Applications that require high performance and low latency, such as relational databases
+                (SQL) and NoSQL databases.</li>
+              <li>Operating Systems: Used as the primary storage for virtual machines and bare-metal servers.</li>
+              <li>Enterprise Applications: Applications that require consistent performance and reliability.</li>
+              <li>File Systems: Can be used to create and manage file systems.</li>
+            </ul>
+          </section>
+
+          <section id="section9" class="learnsection">
+            <h2>Thin Provisioning</h2>
+
+            <p>Thin provisioning is a storage allocation technique where storage space is allocated on demand, as
+              needed, rather than allocating the entire storage capacity upfront. It's like renting a storage unit where
+              you only pay for the space you actually use at any given time, rather than paying for the entire unit
+              regardless of how much you fill it.</p>
+
+            <b>How it Works</b>
+
+            <p>With traditional (thick) provisioning, if you request 100GB of storage, the system immediately reserves
+              that full 100GB, even if you're only using 10GB initially. With thin provisioning, the system only
+              allocates the 10GB you're currently using. As you add more data, the system dynamically allocates more
+              space, up to the maximum provisioned capacity (which can be oversubscribed). This oversubscription means
+              you can provision more storage than is physically available at a given time, relying on the assumption
+              that not all users will use their full allocated space simultaneously.</p>
+
+            <b>Benefits of Thin Provisioning</b>
+
+            <ul>
+              <li>Increased Storage Utilization: Avoids wasting storage space by only allocating what's currently
+                needed.</li>
+              <li>Reduced Upfront Costs: Lower initial investment as you don't need to purchase as much physical storage
+                upfront.</li>
+              <li>Improved Storage Efficiency: Maximizes the use of available storage capacity.</li>
+              <li>Simplified Storage Management: Easier to manage storage as allocation is automated.</li>
+            </ul>
+
+            <h2>Considerations</h2>
+
+            <p>While thin provisioning offers many advantages, it's important to monitor storage usage closely. If usage
+              grows faster than anticipated and exceeds the physical capacity, it can lead to storage shortages and
+              application performance issues. Monitoring tools and alerts are crucial to prevent this.</p>
+
+            <h2>Example</h2>
+
+            <p>Imagine a company with 10 employees, each needing up to 50GB of storage. With thick provisioning, they'd
+              need to allocate 500GB immediately. With thin provisioning, they might initially allocate 200GB, knowing
+              that it's unlikely all employees will use their full 50GB at once. As usage grows, they can add more
+              physical storage as needed.</p>
+          </section>
+
+          <section id="section10" class="learnsection">
+            <h2>File Shares</h2>
+
+            <p>File shares (also known as network file shares or shared folders) provide a way for multiple users and
+              applications to access and share files stored on a central server or storage device over a network. Think
+              of it like a shared filing cabinet that everyone in an office can access.</p>
+
+            <b>How They Work</b>
+
+            <p>A server or storage appliance is configured to host the file share. Users connect to this server over the
+              network (typically using protocols like SMB/CIFS for Windows or NFS for Linux/Unix) and access the shared
+              folders as if they were local drives on their own computers. Permissions and access controls are used to
+              manage who can access, modify, or delete files within the share.</p>
+
+            <b>Key Characteristics</b>
+
+            <ul>
+              <li>Centralized Storage: Files are stored in one central location.</li>
+              <li>Shared Access: Multiple users can access the same files simultaneously.</li>
+              <li>File System Hierarchy: Files are organized in folders and subfolders, just like on a local computer.
+              </li>
+              <li>Access Control: Permissions can be set to control who can access and modify files.</li>
+            </ul>
+
+            <b>Use Cases</b>
+
+            <p>File shares are commonly used for:</p>
+
+            <ul>
+              <li>Collaborative Work: Teams can easily share and work on documents together.</li>
+              <li>Centralized File Storage: Provides a central repository for company files.</li>
+              <li>Home Directories: Users can store their personal files on a network drive.</li>
+              <li>Application Data: Applications can store and share data on a network share.</li>
+            </ul>
+
+            <b>Benefits</b>
+
+            <ul>
+              <li>Simplified File Sharing: Makes it easy to share files between users and applications.</li>
+              <li>Centralized Management: Simplifies file management and backups.</li>
+              <li>Improved Collaboration: Facilitates teamwork and collaboration.</li>
+            </ul>
+
+            <b>Cloud File Shares</b>
+
+            <p>Cloud providers also offer file share services (e.g., Azure Files, AWS EFS). These services provide the
+              same functionality as on-premises file shares but are hosted in the cloud, offering scalability,
+              availability, and simplified management.</p>
+          </section>
+
+          <section id="section11" class="learnsection">
+            <h2>Object Storage</h2>
+
+            <p>Object storage is a data storage architecture that manages data as objects, rather than as files within a
+              file system or blocks within block storage. Each object includes the data itself, metadata (descriptive
+              information about the data), and a unique identifier. This structure enables efficient storage and
+              retrieval of large amounts of unstructured data.</p>
+
+            <b>Key Characteristics</b>
+
+            <ul>
+              <li>Data as Objects: Data is stored as self-contained units called objects.</li>
+              <li>Metadata Rich: Each object contains metadata providing context and information about the data.</li>
+              <li>Unique Identifiers: Each object has a unique identifier, allowing for direct access.</li>
+              <li>Scalability: Highly scalable and suitable for storing massive amounts of data.</li>
+              <li>Flat Structure: Objects are stored in a flat address space (buckets), rather than a hierarchical file
+                system.</li>
+            </ul>
+
+            <b>How it Works</b>
+
+            <p>Data is stored as objects in containers called "buckets." Each object is assigned a unique identifier,
+              and metadata is associated with it. When retrieving data, the system uses the unique identifier to locate
+              and retrieve the object directly. This eliminates the need to navigate a file system hierarchy, making
+              retrieval very efficient.</p>
+
+            <b>Use Cases</b>
+
+            <p>Object storage is well-suited for:</p>
+
+            <ul>
+              <li>Storing Unstructured Data: Images, videos, audio files, log files, backups, and sensor data.</li>
+              <li>Cloud-Native Applications: Applications designed to leverage cloud infrastructure.</li>
+              <li>Data Archiving and Backup: Long-term storage of data that is not frequently accessed.</li>
+              <li>Content Delivery Networks (CDNs): Distributing content globally.</li>
+              <li>Big Data Analytics: Storing and processing large datasets.</li>
+            </ul>
+
+            <b>Benefits</b>
+
+            <ul>
+              <li>Scalability and Cost-Effectiveness: Designed to handle massive amounts of data at a low cost.</li>
+              <li>Metadata Flexibility: Metadata can be customized to provide detailed information about each object.
+              </li>
+              <li>Simplified Management: Flat structure simplifies data management.</li>
+            </ul>
+          </section>
+
+          <section id="section12" class="learnsection">
+            <h2>What are Storage Classes?</h2>
+
+            <p>Storage classes are a way for cloud providers to offer different tiers of storage with varying
+              performance, availability, and cost characteristics. They allow you to choose the storage option that best
+              fits your specific needs and budget. Think of it like choosing a shipping option: you can choose standard
+              shipping for a lower cost but slower delivery, or express shipping for a higher cost but faster delivery.
+              Storage classes offer similar trade-offs.</p>
+
+            <b>Key Characteristics</b>
+
+            <ul>
+              <li>Performance: Different storage classes offer varying levels of IOPS (Input/Output Operations Per
+                Second) and throughput.</li>
+              <li>Availability and Durability: Some classes are designed for higher availability and durability, meaning
+                your data is less likely to be lost.</li>
+              <li>Cost: Storage classes have different pricing models based on storage capacity, data retrieval, and
+                other factors.</li>
+              <li>Access Frequency: Some classes are optimized for frequently accessed data (hot storage), while others
+                are better suited for infrequently accessed data (cold storage or archive storage).</li>
+            </ul>
+
+            <b>Common Storage Class Categories</b>
+
+            <p>While specific names vary between cloud providers (e.g., AWS S3, Azure Blob Storage, Google Cloud
+              Storage), storage classes generally fall into these categories:</p>
+
+            <ul>
+              <li>Hot Storage: Designed for frequently accessed data that requires high performance and low latency.
+                Typically the most expensive option.</li>
+              <li>Warm Storage: For data that is accessed less frequently but still needs to be readily available.
+                Offers a balance of cost and performance.</li>
+              <li>Cold Storage/Archive Storage: For infrequently accessed data that can tolerate longer retrieval times.
+                The most cost-effective option for long-term storage and backups.</li>
+            </ul>
+
+            <b>Choosing the Right Storage Class</b>
+
+            <p>Selecting the appropriate storage class depends on factors like:</p>
+
+            <ul>
+              <li>Access Frequency: How often will the data be accessed?</li>
+              <li>Performance Requirements: How quickly does the data need to be accessed?</li>
+              <li>Cost Sensitivity: How important is cost optimization?</li>
+              <li>Data Lifecycle: How long will the data need to be stored?</li>
+            </ul>
+
+            <p>By understanding these factors and the characteristics of each storage class, you can optimize your cloud
+              storage costs and performance.</p>
+          </section>
+
+          <section id="section13" class="learnsection">
+            <h2>Data Lifecycle Management (DLM)</h2>
+
+            <p>Data lifecycle management (DLM) is a strategy for managing data throughout its lifespan, from creation to
+              deletion. It involves defining policies and procedures for how data is stored, accessed, modified, backed
+              up, archived, and eventually deleted. Backups and snapshots play a crucial role in DLM, particularly in
+              the protection and recovery phases.</p>
+
+            <b>Snapshots</b>
+
+            <p>Snapshots are point-in-time copies of data. They are typically created quickly and efficiently, often
+              using copy-on-write technology, which only copies changed data blocks. Snapshots are primarily used for:
+            </p>
+
+            <ul>
+              <li>Quick Recovery: Restoring data to a previous state in case of accidental deletion or corruption.</li>
+              <li>Testing and Development: Creating copies of production data for testing without affecting the live
+                environment.</li>
+              <li>Short-Term Data Protection: Providing a recent recovery point in case of minor issues.</li>
+            </ul>
+
+            <p>Snapshots are not backups; they usually reside on the same storage system as the original data, meaning
+              they are vulnerable to the same failures. They are best for short-term recovery needs.</p>
+
+            <b>Backups</b>
+
+            <p>Backups are copies of data stored on a separate storage system or location. They are designed for
+              long-term data protection and disaster recovery. Backups are used for:</p>
+
+            <ul>
+              <li>Disaster Recovery: Restoring data in case of a major outage or disaster.</li>
+              <li>Long-Term Archiving: Preserving data for compliance or historical purposes.</li>
+              <li>Protection Against Data Loss: Recovering data from various scenarios, including hardware failures,
+                software errors, and cyberattacks.</li>
+            </ul>
+
+            <p>Backups can be full backups (copying all data), incremental backups (copying only changes since the last
+              backup), or differential backups (copying changes since the last full backup). They are crucial for
+              ensuring business continuity.</p>
+
+            <b>Lifecycle</b>
+
+            <p>Within a DLM strategy, backups and snapshots are used at different stages:</p>
+
+            <ul>
+              <li>Creation/Active Use: Snapshots can be used for frequent recovery points during active data usage.</li>
+              <li>Retention/Archiving: Backups are used to store data for longer periods, often according to regulatory
+                or business requirements.</li>
+              <li>Disposal/Deletion: Data that is no longer needed is securely deleted according to DLM policies.</li>
+            </ul>
+
+            <p>Combining snapshots for quick recovery and backups for long-term protection provides a robust data
+              protection strategy within a comprehensive DLM framework.</p>
+          </section>
+
+          <section id="section14" class="learnsection">
+            <h2>Data Replication</h2>
+
+            <p>Data replication is the process of copying data from one location to another. In the context of disaster
+              recovery and accessibility, it involves replicating data to a secondary site or region, ensuring business
+              continuity and improved data availability.</p>
+
+            <b>How Data Replication Works</b>
+
+            <p>Data is copied from a primary location (the source) to a secondary location (the replica or target). This
+              can be done in various ways, including:</p>
+
+            <ul>
+              <li>Synchronous Replication: Data is written to both the primary and secondary locations simultaneously.
+                Offers the highest level of data protection (zero data loss in case of primary site failure) but can
+                impact performance due to write latency.</li>
+              <li>Asynchronous Replication: Data is written to the primary location first, and then copied to the
+                secondary location later. Offers better performance but may result in some data loss in case of a
+                primary site failure.</li>
+            </ul>
+
+            <b>Disaster Recovery</b>
+
+            <p>Data replication is a cornerstone of a robust disaster recovery (DR) strategy. By having a replicated
+              copy of data in a separate location, organizations can:</p>
+
+            <ul>
+              <li>Minimize Downtime: Quickly switch over to the secondary site in case of a primary site outage.</li>
+              <li>Reduce Data Loss: Recover data from the secondary site if the primary site is unavailable.</li>
+              <li>Maintain Business Continuity: Ensure critical business operations can continue even during a disaster.
+              </li>
+            </ul>
+
+            <b>Accessibility</b>
+
+            <p>Data replication also enhances data accessibility by:</p>
+
+            <ul>
+              <li>Improving Read Performance: Users can access data from the closest replica, reducing latency and
+                improving response times.</li>
+              <li>Enabling Global Access: Replicating data to multiple regions allows users around the world to access
+                data quickly and efficiently.</li>
+              <li>Supporting Read-Only Operations: Replicas can be used for read-only operations, offloading traffic
+                from the primary site.</li>
+            </ul>
+
+            <b>Types of Replication</b>
+
+            <p>Replication can occur at different levels:</p>
+            <ul>
+              <li>Storage Replication: Replicates data at the storage level, independent of the operating system or
+                applications.</li>
+              <li>Database Replication: Replicates database data between database servers.</li>
+              <li>Application Replication: Replicates application data and configuration.</li>
+            </ul>
+
+            <p>Choosing the right replication method depends on factors like recovery time objective (RTO), recovery
+              point objective (RPO), budget, and performance requirements.</p>
+          </section>
+
+          <section id="section15" class="learnsection">
+            <h2>Big Data Storage</h2>
+
+            <p>Big data refers to extremely large and complex datasets that traditional data processing software can't
+              easily handle. These datasets are characterized by the "5 Vs": Volume (sheer amount of data), Velocity
+              (speed of data generation), Variety (different data types), Veracity (data quality and trustworthiness),
+              and Value (the insights that can be extracted). Data lakes play a crucial role in managing and analyzing
+              big data.</p>
+
+            <b>What is a Data Lake?</b>
+
+            <p>A data lake is a centralized repository that stores vast amounts of raw data in its native format. Unlike
+              a data warehouse, which stores structured, processed data, a data lake can store structured,
+              semi-structured (like JSON or CSV), and unstructured data (like images, videos, and text). This
+              flexibility makes it ideal for handling the variety of big data.</p>
+
+            <b>Key Characteristics of Data Lakes</b>
+
+            <ul>
+              <li>Store Raw Data: Data is stored in its original format without requiring upfront transformation.</li>
+              <li>Schema-on-Read: Data schema is applied when the data is read or analyzed, providing flexibility.</li>
+              <li>Scalability: Designed to handle massive volumes of data.</li>
+              <li>Centralized Repository: Provides a single location for storing all types of data.</li>
+            </ul>
+
+            <b>How Data Lakes Relate to Big Data</b>
+
+            <p>Data lakes are well-suited for big data because they:</p>
+
+            <ul>
+              <li>Handle Variety: Can store different data types, addressing the variety aspect of big data.</li>
+              <li>Scale to Meet Volume: Can accommodate the massive volume of big data.</li>
+              <li>Enable Data Discovery: Allow data scientists and analysts to explore and discover insights from raw
+                data.</li>
+              <li>Support Advanced Analytics: Provide a foundation for machine learning, artificial intelligence, and
+                other advanced analytics techniques.</li>
+            </ul>
+
+            <b>Benefits of Using Data Lakes for Big Data</b>
+
+            <ul>
+              <li>Flexibility: Store any type of data without predefined schemas.</li>
+              <li>Cost-Effectiveness: Can use lower-cost storage options for raw data.</li>
+              <li>Improved Data Discovery: Facilitates exploration and discovery of new insights.</li>
+              <li>Faster Time to Insights: Allows for faster analysis and generation of business value.</li>
+            </ul>
+
+            <p>In short, data lakes provide a scalable and flexible platform for storing and analyzing the diverse and
+              massive datasets characteristic of big data, enabling organizations to extract valuable insights.</p>
+          </section>
+
+          <!--- make this next section# 1 more than the previous one (eg. if previous is section10 the below one would be section11) -->
+          <section id="section16" class="learnsection">
+            <h2>Congratulations!</h2>
+            <p>What is next for you? Let's do a knowledge check to see if you completely grasped the concepts you
+              just learned.</p>
+            <ul class="no-bullets">
+              <li>1. Click on the Knowledge Check tab on the top right of your screen and take the quiz.</li>
+              <li>2. Click on the Learning Material to return for any help.</li>
+            </ul>
+            <p>If you require additional help please reach out in any of the Chat Groups.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div class="row h-90 quiz hide">
+      <div class="col-12 col-sm-9">
+        <div id="quizcontent" class="overflow-auto">
+          <section id="q1" class="questions active" data-index="1">
+            <h3>1) How does Instance storage and Block storage differ?</h3>
+
+            <input type="radio" name="q1a" class="answer q1 incorrect" id="q1-1">
+            <input type="radio" name="q1a" class="answer q1 incorrect" id="q1-2">
+            <input type="radio" name="q1a" class="answer q1 incorrect" id="q1-3">
+            <input type="radio" name="q1a" class="answer q1 correct" id="q1-4">
+
+            <label for="q1-1" class="box q1-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) Instance storage is perminant
+                  and Block storage is temporary. </span> </div>
+            </label>
+            <label for="q1-2" class="box q1-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) Instance storage is hosted
+                  independently and separate from the VM. </span> </div>
+            </label>
+            <label for="q1-3" class="box q1-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) Instance storage is the same
+                  as RAM. </span> </div>
+            </label>
+            <label for="q1-4" class="box q1-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Instance storage is temporary
+                  and Block storage is perminant. </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q1b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q2" class="questions" data-index="2">
+            <h3>2) What is Thin Provisioning?</h3>
+
+            <input type="radio" name="q2a" class="answer q2 correct" id="q2-1">
+            <input type="radio" name="q2a" class="answer q2 incorrect" id="q2-2">
+            <input type="radio" name="q2a" class="answer q2 incorrect" id="q2-3">
+            <input type="radio" name="q2a" class="answer q2 incorrect" id="q2-4">
+
+            <label for="q2-1" class="box q2-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) Storage space is allocated on
+                  demand, as needed. </span> </div>
+            </label>
+            <label for="q2-2" class="box q2-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) Storage space is reserved
+                  based on projected growth. </span> </div>
+            </label>
+            <label for="q2-3" class="box q2-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) Provisioning only community
+                  versions of software. </span> </div>
+            </label>
+            <label for="q2-4" class="box q2-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Compressing data on storage to
+                  make it light weight. </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q2b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q3" class="questions" data-index="3">
+            <h3>3) Which storage is enriched with Meta-data?</h3>
+
+            <input type="radio" name="q3a" class="answer q3 incorrect" id="q3-1">
+            <input type="radio" name="q3a" class="answer q3 correct" id="q3-2">
+            <input type="radio" name="q3a" class="answer q3 incorrect" id="q3-3">
+            <input type="radio" name="q3a" class="answer q3 incorrect" id="q3-4">
+
+            <label for="q3-1" class="box q3-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) File Shares. </span> </div>
+            </label>
+            <label for="q3-2" class="box q3-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) Object storage. </span> </div>
+            </label>
+            <label for="q3-3" class="box q3-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) Instance storage. </span>
+              </div>
+            </label>
+            <label for="q3-4" class="box q3-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Block storage. </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q3b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q4" class="questions" data-index="4">
+            <h3>4) Frequently accessed data is generally described as?</h3>
+
+            <input type="radio" name="q4a" class="answer q4 incorrect" id="q4-1">
+            <input type="radio" name="q4a" class="answer q4 incorrect" id="q4-2">
+            <input type="radio" name="q4a" class="answer q4 incorrect" id="q4-3">
+            <input type="radio" name="q4a" class="answer q4 correct" id="q4-4">
+
+            <label for="q4-1" class="box q4-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) Cold. </span> </div>
+            </label>
+            <label for="q4-2" class="box q4-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) Frozen. </span> </div>
+            </label>
+            <label for="q4-3" class="box q4-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) Warm. </span> </div>
+            </label>
+            <label for="q4-4" class="box q4-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Hot. </span></div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q4b" onclick="">Submit</button>
+            </div>
+          </section>
+
+          <section id="q5" class="questions" data-index="5">
+            <h3>5) What are Snapshots?</h3>
+
+            <input type="radio" name="q5a" class="answer q5 incorrect" id="q5-1">
+            <input type="radio" name="q5a" class="answer q5 correct" id="q5-2">
+            <input type="radio" name="q5a" class="answer q5 incorrect" id="q5-3">
+            <input type="radio" name="q5a" class="answer q5 incorrect" id="q5-4">
+
+            <label for="q5-1" class="box q5-1">
+              <div class="course"> <span class="circle"></span> <span class="subject"> a) Data encryption. </span>
+              </div>
+            </label>
+            <label for="q5-2" class="box q5-2">
+              <div class="course"> <span class="circle"></span> <span class="subject"> b) A point in time copy. </span>
+              </div>
+            </label>
+            <label for="q5-3" class="box q5-3">
+              <div class="course"> <span class="circle"></span> <span class="subject"> c) A on-demand request for
+                  storage. </span> </div>
+            </label>
+            <label for="q5-4" class="box q5-4">
+              <div class="course"> <span class="circle"></span> <span class="subject"> d) Big Data storage. </span>
+              </div>
+            </label>
+            <div class="submit">
+              <button type="button" class="btn btn-primary btn-md quizbutton" id="q5b" onclick="">Submit</button>
+            </div>
+          </section>
+
+
+          <section id="q6" class="questions" data-index="6">
+            <canvas id="confetti"></canvas>
+            <h3>Congratulations! Your Knowledge is 100%</h3>
+            <p>You can now proceed to the next course on your learning path. If one is not availble please inquire with
+              the community. We are releasing new courses periodicly, so keep a lookout for them.</p>
+            <p>Click on the Home Icon at the top left of your screen. <i class="fa fa-home"></i> </p>
+            <p>Good luck! Keep learning and growing!</p>
+          </section>
+        </div>
+      </div>
+      <div class="col-12 col-sm-3">
+        <div id="quizanswers" class="overflow-auto">
+          <section id="quizhint"></section>
+        </div>
+      </div>
+    </div>
+    <div class="row controls">
+      <div class="col-9 col-sm-7">
+        <button id="play" type="button" class="btn btn-danger btn-md">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button id="stop" type="button" class="btn btn-dark btn-md">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+        <button id="prev" type="button" class="btn btn-primary btn-md disabled"
+          data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button id="next" type="button" class="btn btn-primary btn-md" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <select id="voices" class="form-select-lg select mx-auto"></select>
+        <select id="speed" class="form-select-lg select  mx-auto"></select>
+        <button id="fullscreen" type="button" class="btn btn-primary btn-md">
+          <i class="fa-solid fa-expand"></i>
+        </button>
+      </div>
+      <div class="col-2 controls align-right">
+        <input id="auto" class="check-input" type="checkbox" value="">
+        <label class="form-check-label" for="check-input" style="margin-right: 15px;">
+          Play On Next
+        </label>
+      </div>
+      <div class="col">
+        <div class="progress">
+          <div id="progress" class="progress-bar bg-success" role="progressbar">
+            0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script type="text/javascript" src="../../js/course.js"></script>
+</body>
+
+</html>
